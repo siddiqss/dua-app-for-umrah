@@ -1,0 +1,484 @@
+[
+  {
+    "id": "umrah-preparation",
+    "ritual": "umrah",
+    "category": "preparation",
+    "title": "Preparation & Ghusl",
+    "titleAr": "التحضير والاغتسال",
+    "sequence": 1,
+    "instructions": "Before departing for Miqat, perform ghusl (full body wash), trim your nails, and apply perfume (men only, before Ihram). Women should also perform ghusl even if menstruating.",
+    "duas": [
+      {
+        "id": "prep-bismillah",
+        "arabic": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+        "transliteration": "Bismillahir Rahmanir Raheem",
+        "translation": "In the name of Allah, the Most Gracious, the Most Merciful.",
+        "reference": "General Islamic practice"
+      },
+      {
+        "id": "prep-ghusl",
+        "arabic": "اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ",
+        "transliteration": "Allahummaj'alni minat-tawwabeena waj'alni minal-mutatah-hireen",
+        "translation": "O Allah, make me among those who repent and make me among those who purify themselves.",
+        "reference": "Tirmidhi 55"
+      }
+    ]
+  },
+  {
+    "id": "umrah-ihram",
+    "ritual": "umrah",
+    "category": "ihram",
+    "title": "Ihram at Miqat",
+    "titleAr": "الإحرام عند الميقات",
+    "sequence": 2,
+    "instructions": "Put on Ihram garments (two white unstitched sheets for men; regular modest clothing for women). Pray 2 rakat Sunnah. Make your niyyah (intention) for Umrah and begin reciting the Talbiyah continuously.",
+    "duas": [
+      {
+        "id": "ihram-niyyah",
+        "arabic": "لَبَّيْكَ اللَّهُمَّ عُمْرَةً",
+        "transliteration": "Labbayk Allahumma 'Umratan",
+        "translation": "Here I am, O Allah, for Umrah.",
+        "reference": "Sahih Muslim 1232",
+        "note": "Say this at the Miqat to make your intention for Umrah."
+      },
+      {
+        "id": "ihram-talbiyah",
+        "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ لَا شَرِيكَ لَكَ",
+        "transliteration": "Labbayk Allahumma Labbayk. Labbayk la shareeka laka Labbayk. Innal-hamda wan-ni'mata laka wal-mulk. La shareeka lak.",
+        "translation": "Here I am, O Allah, here I am. Here I am, You have no partner, here I am. Verily all praise, grace and sovereignty belong to You. You have no partner.",
+        "reference": "Sahih al-Bukhari 1549, Sahih Muslim 1184",
+        "note": "Recite this continuously from Miqat until you begin Tawaf. Men should raise their voices; women recite softly."
+      }
+    ]
+  },
+  {
+    "id": "umrah-enter-masjid",
+    "ritual": "umrah",
+    "category": "masjid",
+    "title": "Entering Masjid al-Haram",
+    "titleAr": "دخول المسجد الحرام",
+    "sequence": 3,
+    "instructions": "Enter with your right foot. Stop reciting the Talbiyah when you see the Kaaba. Make dua upon first sight of the Kaaba — this is a moment when supplications are accepted.",
+    "duas": [
+      {
+        "id": "enter-masjid",
+        "arabic": "بِسْمِ اللَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+        "transliteration": "Bismillahi was-salatu was-salamu 'ala Rasulillah. Allahummaf-tah li abwaba rahmatik.",
+        "translation": "In the name of Allah, and peace and blessings be upon the Messenger of Allah. O Allah, open for me the doors of Your mercy.",
+        "reference": "Sahih Muslim 713"
+      },
+      {
+        "id": "first-sight-kaaba",
+        "arabic": "اللَّهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً، وَزِدْ مَنْ شَرَّفَهُ وَعَظَّمَهُ مِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيفًا وَتَكْرِيمًا وَتَعْظِيمًا وَبِرًّا",
+        "transliteration": "Allahumma zid hadhal-bayta tashreefan wa ta'theeman wa takreeman wa mahabah, wa zid man sharrafahu wa 'aththamahu mimman hajjahu awi'tamarahu tashreefan wa takreeman wa ta'theeman wa birra.",
+        "translation": "O Allah, increase this House in honor, esteem, respect, and reverence. And increase those who honor and revere it — of those who perform Hajj or Umrah — in honor, respect, esteem, and righteousness.",
+        "reference": "Reported by al-Bayhaqi",
+        "note": "Make any personal dua now. This is a blessed moment when duas are accepted."
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-start",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Beginning Tawaf",
+    "titleAr": "بداية الطواف",
+    "sequence": 4,
+    "instructions": "Face the Black Stone (Hajar al-Aswad). If possible, touch or kiss it. Otherwise, point towards it with your right hand. Say 'Bismillahi Allahu Akbar.' Men should perform Idtiba (exposing right shoulder) during Tawaf. Begin circling counter-clockwise.",
+    "duas": [
+      {
+        "id": "tawaf-start-black-stone",
+        "arabic": "بِسْمِ اللَّهِ اللَّهُ أَكْبَرُ",
+        "transliteration": "Bismillahi Allahu Akbar",
+        "translation": "In the name of Allah, Allah is the Greatest.",
+        "reference": "Sahih al-Bukhari",
+        "note": "Say this each time you pass the Black Stone at the start of each circuit."
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-1",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Tawaf - Circuit 1",
+    "titleAr": "الطواف - الشوط ١",
+    "sequence": 5,
+    "subSequence": 1,
+    "instructions": "Begin from the Black Stone, circling the Kaaba counter-clockwise. Men should do Raml (walk briskly with short steps) in the first 3 circuits. Make the following dua during this circuit.",
+    "duas": [
+      {
+        "id": "tawaf-1-dua",
+        "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+        "transliteration": "SubhanAllahi wal-hamdu lillahi wa la ilaha illAllahu wallahu Akbar, wa la hawla wa la quwwata illa billah.",
+        "translation": "Glory be to Allah, all praise is for Allah, there is no god but Allah, Allah is the Greatest, and there is no power or strength except with Allah.",
+        "reference": "Ibn Majah"
+      },
+      {
+        "id": "tawaf-1-forgiveness",
+        "arabic": "اللَّهُمَّ اغْفِرْ لِي وَارْحَمْنِي وَاهْدِنِي وَعَافِنِي وَارْزُقْنِي",
+        "transliteration": "Allahumma-ghfir li, warhamni, wahdini, wa 'aafini, warzuqni.",
+        "translation": "O Allah, forgive me, have mercy on me, guide me, grant me well-being, and provide for me.",
+        "reference": "Sahih Muslim 2697"
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-2",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Tawaf - Circuit 2",
+    "titleAr": "الطواف - الشوط ٢",
+    "sequence": 6,
+    "subSequence": 2,
+    "instructions": "Continue circling the Kaaba counter-clockwise. Remember Raml (brisk walking) in this circuit. Say 'Bismillahi Allahu Akbar' as you pass the Black Stone.",
+    "duas": [
+      {
+        "id": "tawaf-2-dua",
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+        "transliteration": "Allahumma inni as'alukal-'afwa wal-'aafiyata fid-dunya wal-aakhirah. Rabbana aatina fid-dunya hasanatan wa fil-aakhirati hasanatan wa qina 'adhaban-naar.",
+        "translation": "O Allah, I ask You for pardon and well-being in this world and the Hereafter. Our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of the Fire.",
+        "reference": "Quran 2:201, Ibn Majah 3846"
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-3",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Tawaf - Circuit 3",
+    "titleAr": "الطواف - الشوط ٣",
+    "sequence": 7,
+    "subSequence": 3,
+    "instructions": "Last circuit of Raml (brisk walking) for men. Continue your supplications and dhikr.",
+    "duas": [
+      {
+        "id": "tawaf-3-dua",
+        "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الشَّكِّ وَالشِّرْكِ وَالشِّقَاقِ وَالنِّفَاقِ وَسُوءِ الْأَخْلَاقِ وَسُوءِ الْمَنْظَرِ وَالْمُنْقَلَبِ فِي الْمَالِ وَالْأَهْلِ وَالْوَلَدِ",
+        "transliteration": "Allahumma inni a'udhu bika minash-shakki wash-shirki wash-shiqaaqi wan-nifaaqi wa su'il-akhlaaqi wa su'il-manthari wal-munqalabi fil-maali wal-ahli wal-walad.",
+        "translation": "O Allah, I seek refuge in You from doubt, associating partners with You, discord, hypocrisy, bad character, and from a bad outcome in wealth, family, and children.",
+        "reference": "Abu Dawud"
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-4",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Tawaf - Circuit 4",
+    "titleAr": "الطواف - الشوط ٤",
+    "sequence": 8,
+    "subSequence": 4,
+    "instructions": "From this circuit onward, walk at a normal pace. Continue making dhikr and personal duas.",
+    "duas": [
+      {
+        "id": "tawaf-4-dua",
+        "arabic": "اللَّهُمَّ اجْعَلْهُ حَجًّا مَبْرُورًا وَسَعْيًا مَشْكُورًا وَذَنْبًا مَغْفُورًا وَعَمَلًا صَالِحًا مَقْبُولًا وَتِجَارَةً لَنْ تَبُورَ، يَا عَالِمَ مَا فِي الصُّدُورِ",
+        "transliteration": "Allahummaj'alhu hajjan mabroran wa sa'yan mashkoran wa dhanban maghforan wa 'amalan salihan maqbulan wa tijaratan lan taboor, ya 'aalima ma fis-sudoor.",
+        "translation": "O Allah, make it an accepted pilgrimage, an effort that is appreciated, a sin that is forgiven, a righteous deed that is accepted, and a trade that will never perish, O Knower of what is in the hearts.",
+        "reference": "Reported in various collections"
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-5",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Tawaf - Circuit 5",
+    "titleAr": "الطواف - الشوط ٥",
+    "sequence": 9,
+    "subSequence": 5,
+    "instructions": "Continue at a normal pace. Remember to make dua between the Yemeni Corner (Rukn al-Yamani) and the Black Stone.",
+    "duas": [
+      {
+        "id": "tawaf-5-dua",
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ وَالْمُعَافَاةَ الدَّائِمَةَ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ",
+        "transliteration": "Allahumma inni as'alukal-'afwa wal-'aafiyata wal-mu'aafaatad-daa'imata fid-deeni wad-dunya wal-aakhirah.",
+        "translation": "O Allah, I ask You for pardon, well-being, and lasting protection in my religion, in this world, and in the Hereafter.",
+        "reference": "Abu Dawud, Ibn Majah"
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-6",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Tawaf - Circuit 6",
+    "titleAr": "الطواف - الشوط ٦",
+    "sequence": 10,
+    "subSequence": 6,
+    "instructions": "Continue your Tawaf at a normal pace. Increase your personal supplications.",
+    "duas": [
+      {
+        "id": "tawaf-6-dua",
+        "arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي، وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي، وَأَصْلِحْ لِي آخِرَتِي الَّتِي فِيهَا مَعَادِي، وَاجْعَلِ الْحَيَاةَ زِيَادَةً لِي فِي كُلِّ خَيْرٍ، وَاجْعَلِ الْمَوْتَ رَاحَةً لِي مِنْ كُلِّ شَرٍّ",
+        "transliteration": "Allahumma aslih li deeniyal-ladhi huwa 'ismatu amri, wa aslih li dunyayal-lati fiha ma'aashi, wa aslih li aakhiratiyal-lati fiha ma'aadi, waj'alil-hayata ziyadatan li fi kulli khair, waj'alil-mawta rahatan li min kulli sharr.",
+        "translation": "O Allah, set right my religion which is the safeguard of my affairs. Set right my worldly life in which is my livelihood. Set right my Hereafter to which is my return. Make life an increase for me in every good, and make death a relief for me from every evil.",
+        "reference": "Sahih Muslim 2720"
+      }
+    ]
+  },
+  {
+    "id": "umrah-tawaf-7",
+    "ritual": "umrah",
+    "category": "tawaf",
+    "title": "Tawaf - Circuit 7",
+    "titleAr": "الطواف - الشوط ٧",
+    "sequence": 11,
+    "subSequence": 7,
+    "instructions": "Final circuit. Make your most heartfelt duas. Between the Yemeni Corner and the Black Stone, recite the dua below. After completing, point toward the Black Stone and say 'Allahu Akbar.'",
+    "duas": [
+      {
+        "id": "tawaf-7-yamani",
+        "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+        "transliteration": "Rabbana aatina fid-dunya hasanatan wa fil-aakhirati hasanatan wa qina 'adhaban-naar.",
+        "translation": "Our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of the Fire.",
+        "reference": "Quran 2:201 — Sahih al-Bukhari, Sahih Muslim",
+        "note": "This dua is specifically recommended between the Yemeni Corner and the Black Stone in every circuit, especially the final one."
+      },
+      {
+        "id": "tawaf-7-completion",
+        "arabic": "اللَّهُمَّ قَنِّعْنِي بِمَا رَزَقْتَنِي وَبَارِكْ لِي فِيهِ وَاخْلُفْ عَلَى كُلِّ غَائِبَةٍ لِي بِخَيْرٍ",
+        "transliteration": "Allahumma qanni'ni bima razaqtani wa baarik li fihi wakhluf 'ala kulli gha'ibatin li bi-khair.",
+        "translation": "O Allah, make me content with what You have provided me, bless me in it, and replace everything I have missed with something good.",
+        "reference": "Reported in various collections"
+      }
+    ]
+  },
+  {
+    "id": "umrah-maqam-ibrahim",
+    "ritual": "umrah",
+    "category": "maqam",
+    "title": "Prayer at Maqam Ibrahim",
+    "titleAr": "الصلاة عند مقام إبراهيم",
+    "sequence": 12,
+    "instructions": "After completing 7 circuits, move to Maqam Ibrahim. If crowded, pray anywhere in the Masjid. Pray 2 rakat — recite Surah Al-Kafirun in the first rakat and Surah Al-Ikhlas in the second.",
+    "duas": [
+      {
+        "id": "maqam-verse",
+        "arabic": "وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى",
+        "transliteration": "Wattakhidhu min maqami Ibrahima musalla.",
+        "translation": "And take the Station of Ibrahim as a place of prayer.",
+        "reference": "Quran 2:125",
+        "note": "Recite this verse as you approach Maqam Ibrahim."
+      },
+      {
+        "id": "maqam-kafirun",
+        "arabic": "قُلْ يَا أَيُّهَا الْكَافِرُونَ، لَا أَعْبُدُ مَا تَعْبُدُونَ، وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ، وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ، وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ، لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "transliteration": "Qul ya ayyuhal-kafirun. La a'budu ma ta'budun. Wa la antum 'aabiduna ma a'bud. Wa la ana 'aabidun ma 'abadtum. Wa la antum 'aabiduna ma a'bud. Lakum deenukum waliya deen.",
+        "translation": "Say: O disbelievers, I do not worship what you worship. Nor are you worshippers of what I worship. Nor will I be a worshipper of what you worship. Nor will you be worshippers of what I worship. For you is your religion, and for me is my religion.",
+        "reference": "Quran 109:1-6 — First rakat"
+      },
+      {
+        "id": "maqam-ikhlas",
+        "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ، اللَّهُ الصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+        "transliteration": "Qul huwa Allahu ahad. Allahus-samad. Lam yalid wa lam yulad. Wa lam yakun lahu kufuwan ahad.",
+        "translation": "Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
+        "reference": "Quran 112:1-4 — Second rakat"
+      }
+    ]
+  },
+  {
+    "id": "umrah-zamzam",
+    "ritual": "umrah",
+    "category": "zamzam",
+    "title": "Drinking Zamzam Water",
+    "titleAr": "شرب ماء زمزم",
+    "sequence": 13,
+    "instructions": "After praying at Maqam Ibrahim, drink Zamzam water. Face the Kaaba while drinking. Make dua before drinking — the Prophet (peace be upon him) said Zamzam water is for whatever it is drunk for.",
+    "duas": [
+      {
+        "id": "zamzam-dua",
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ",
+        "transliteration": "Allahumma inni as'aluka 'ilman naafi'an wa rizqan waasi'an wa shifaa'an min kulli daa'.",
+        "translation": "O Allah, I ask You for beneficial knowledge, abundant provision, and healing from every illness.",
+        "reference": "Reported by al-Hakim, Ad-Daraqutni",
+        "note": "The Prophet (peace be upon him) said: 'The water of Zamzam is for whatever purpose it is drunk for.' (Ibn Majah 3062)"
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-start",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Beginning Sa'i at Safa",
+    "titleAr": "بداية السعي عند الصفا",
+    "sequence": 14,
+    "instructions": "Head to Mount Safa. Ascend it until you can see the Kaaba (if possible). Face the Kaaba, raise your hands, and make dua. Sa'i begins here.",
+    "duas": [
+      {
+        "id": "sai-start-verse",
+        "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ",
+        "transliteration": "Innas-Safa wal-Marwata min sha'aa'irillah.",
+        "translation": "Indeed, Safa and Marwa are among the symbols of Allah.",
+        "reference": "Quran 2:158",
+        "note": "Recite this verse when you first approach Safa. This is only recited once at the start."
+      },
+      {
+        "id": "sai-start-safa",
+        "arabic": "أَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ",
+        "transliteration": "Abda'u bima bada'Allahu bihi.",
+        "translation": "I begin with that which Allah began with.",
+        "reference": "Sahih Muslim 1218"
+      },
+      {
+        "id": "sai-safa-dua",
+        "arabic": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ",
+        "transliteration": "La ilaha illAllahu wahdahu la shareeka lah, lahul-mulku wa lahul-hamdu wa huwa 'ala kulli shay'in qadeer. La ilaha illAllahu wahdah, anjaza wa'dah, wa nasara 'abdah, wa hazamal-ahzaaba wahdah.",
+        "translation": "There is no god but Allah alone, with no partner. His is the dominion and His is the praise, and He is capable of all things. There is no god but Allah alone. He fulfilled His promise, supported His servant, and defeated the confederates alone.",
+        "reference": "Sahih Muslim 1218",
+        "note": "Recite this 3 times at Safa, making personal dua in between each recitation."
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-1",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Sa'i - Lap 1 (Safa to Marwa)",
+    "titleAr": "السعي - الشوط ١",
+    "sequence": 15,
+    "subSequence": 1,
+    "instructions": "Walk from Safa toward Marwa. Men should jog between the two green fluorescent markers. Make dhikr and dua throughout.",
+    "duas": [
+      {
+        "id": "sai-1-dua",
+        "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ الْأَعَزُّ الْأَكْرَمُ",
+        "transliteration": "Rabbigh-fir warham wa anta al-a'azzul-akram.",
+        "translation": "My Lord, forgive and have mercy, for You are the Most Mighty, the Most Noble.",
+        "reference": "Reported by Ibn Abi Shaybah"
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-2",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Sa'i - Lap 2 (Marwa to Safa)",
+    "titleAr": "السعي - الشوط ٢",
+    "sequence": 16,
+    "subSequence": 2,
+    "instructions": "Upon reaching Marwa, ascend it, face the Kaaba (if visible), and make the same dua as at Safa. Then walk back toward Safa. Jog between the green markers.",
+    "duas": [
+      {
+        "id": "sai-2-dua",
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مُوجِبَاتِ رَحْمَتِكَ وَعَزَائِمَ مَغْفِرَتِكَ وَالسَّلَامَةَ مِنْ كُلِّ إِثْمٍ وَالْغَنِيمَةَ مِنْ كُلِّ بِرٍّ وَالْفَوْزَ بِالْجَنَّةِ وَالنَّجَاةَ مِنَ النَّارِ",
+        "transliteration": "Allahumma inni as'aluka mujibati rahmatik, wa 'azaa'ima maghfiratik, was-salamata min kulli ithm, wal-ghaneemata min kulli birr, wal-fawza bil-jannah, wan-najaata minan-naar.",
+        "translation": "O Allah, I ask You for the means of Your mercy, the causes of Your forgiveness, safety from every sin, benefit from every righteous deed, success in Paradise, and salvation from the Fire.",
+        "reference": "Reported in various collections"
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-3",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Sa'i - Lap 3 (Safa to Marwa)",
+    "titleAr": "السعي - الشوط ٣",
+    "sequence": 17,
+    "subSequence": 3,
+    "instructions": "Continue from Safa to Marwa. Keep making dhikr and personal duas as you walk.",
+    "duas": [
+      {
+        "id": "sai-3-dua",
+        "arabic": "رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ",
+        "transliteration": "Rabbana thalamna anfusana wa in lam taghfir lana wa tarhamna lanakoonanna minal-khasireen.",
+        "translation": "Our Lord, we have wronged ourselves. If You do not forgive us and have mercy upon us, we will surely be among the losers.",
+        "reference": "Quran 7:23"
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-4",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Sa'i - Lap 4 (Marwa to Safa)",
+    "titleAr": "السعي - الشوط ٤",
+    "sequence": 18,
+    "subSequence": 4,
+    "instructions": "Walk from Marwa back to Safa. Continue your supplications. Remember to jog between the green markers.",
+    "duas": [
+      {
+        "id": "sai-4-dua",
+        "arabic": "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَدْخِلْنِي بِرَحْمَتِكَ فِي عِبَادِكَ الصَّالِحِينَ",
+        "transliteration": "Rabbi awzi'ni an ashkura ni'matakal-lati an'amta 'alayya wa 'ala walidayya wa an a'mala salihan tardahu wa adkhilni birahmatika fi 'ibaadikas-saliheen.",
+        "translation": "My Lord, inspire me to be grateful for Your favors which You have bestowed upon me and upon my parents, and to do righteous deeds that please You. Admit me by Your mercy among Your righteous servants.",
+        "reference": "Quran 27:19"
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-5",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Sa'i - Lap 5 (Safa to Marwa)",
+    "titleAr": "السعي - الشوط ٥",
+    "sequence": 19,
+    "subSequence": 5,
+    "instructions": "Continue from Safa to Marwa. Keep your heart engaged in remembrance of Allah.",
+    "duas": [
+      {
+        "id": "sai-5-dua",
+        "arabic": "اللَّهُمَّ اكْتُبْ لِي عِنْدَكَ أَجْرًا، وَاجْعَلْ لِي عِنْدَكَ ذُخْرًا، وَافْتَحْ لِي عِنْدَكَ بَابًا",
+        "transliteration": "Allahummak-tub li 'indaka ajran, waj'al li 'indaka dhukhran, waftah li 'indaka baaban.",
+        "translation": "O Allah, record for me a reward with You, place for me a treasure with You, and open for me a door (of goodness) with You.",
+        "reference": "Reported in various collections"
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-6",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Sa'i - Lap 6 (Marwa to Safa)",
+    "titleAr": "السعي - الشوط ٦",
+    "sequence": 20,
+    "subSequence": 6,
+    "instructions": "Walk from Marwa back to Safa. You are nearing the completion of Sa'i.",
+    "duas": [
+      {
+        "id": "sai-6-dua",
+        "arabic": "رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ، وَتُبْ عَلَيْنَا إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ",
+        "transliteration": "Rabbana taqabbal minna innaka antas-samee'ul-'aleem. Wa tub 'alayna innaka antat-tawwaabur-raheem.",
+        "translation": "Our Lord, accept this from us. Indeed, You are the All-Hearing, the All-Knowing. And turn to us in mercy. Indeed, You are the Accepting of Repentance, the Merciful.",
+        "reference": "Quran 2:127-128"
+      }
+    ]
+  },
+  {
+    "id": "umrah-sai-7",
+    "ritual": "umrah",
+    "category": "sai",
+    "title": "Sa'i - Lap 7 (Safa to Marwa)",
+    "titleAr": "السعي - الشوط ٧",
+    "sequence": 21,
+    "subSequence": 7,
+    "instructions": "Final lap. You will end at Marwa. Make your most heartfelt duas. After reaching Marwa, make dua facing the Kaaba one final time.",
+    "duas": [
+      {
+        "id": "sai-7-dua",
+        "arabic": "رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
+        "transliteration": "Rabbigh-fir li wa li-waalidayya wa lil-mu'mineena yawma yaqoomul-hisaab.",
+        "translation": "My Lord, forgive me and my parents and the believers on the Day the account is established.",
+        "reference": "Quran 14:41"
+      }
+    ]
+  },
+  {
+    "id": "umrah-halq",
+    "ritual": "umrah",
+    "category": "completion",
+    "title": "Halq or Taqsir",
+    "titleAr": "الحلق أو التقصير",
+    "sequence": 22,
+    "instructions": "Men: Shave the head completely (Halq) or trim hair evenly (Taqsir). Shaving is more virtuous. Women: Trim about a fingertip's length of hair. This completes your Umrah. You are now out of Ihram. All Ihram restrictions are lifted. Alhamdulillah!",
+    "duas": [
+      {
+        "id": "halq-praise",
+        "arabic": "الْحَمْدُ لِلَّهِ الَّذِي قَضَى عَنَّا نُسُكَنَا، اللَّهُمَّ اجْعَلْهَا عُمْرَةً مَبْرُورَةً وَذَنْبًا مَغْفُورًا",
+        "transliteration": "Alhamdu lillahil-ladhi qada 'anna nusukana. Allahummaj'alha 'umratan mabruratan wa dhanban maghfura.",
+        "translation": "All praise is for Allah who has fulfilled our rites. O Allah, make it an accepted Umrah and a forgiven sin.",
+        "reference": "General supplication"
+      }
+    ]
+  }
+]

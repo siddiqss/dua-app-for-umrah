@@ -1,4 +1,62 @@
+import withPWAInit from "@ducanh2912/next-pwa";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+const precacheEntries = require("./scripts/precache-urls.js");
+
+const withPWA = withPWAInit({
+  dest: "public",
+  cacheOnFrontEndNav: true,
+  aggressiveFrontEndNavCaching: true,
+  cacheStartUrl: true,
+  reloadOnOnline: true,
+  swcMinify: true,
+  disable: process.env.NODE_ENV === "development",
+  fallbacks: {
+    document: "/~offline",
+  },
+  workboxOptions: {
+    disableDevLogs: true,
+    additionalManifestEntries: precacheEntries,
+    runtimeCaching: [
+      {
+        urlPattern: /^https:\/\/fonts\.(?:gstatic|googleapis)\.com\/.*/i,
+        handler: "CacheFirst",
+        options: {
+          cacheName: "google-fonts",
+          expiration: {
+            maxEntries: 10,
+            maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+          },
+        },
+      },
+      {
+        urlPattern: /\.(?:js|css|woff|woff2)$/i,
+        handler: "StaleWhileRevalidate",
+        options: {
+          cacheName: "static-resources",
+          expiration: {
+            maxEntries: 120,
+            maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year - avoid evicting cached app
+          },
+        },
+      },
+      {
+        urlPattern: /\.(?:json)$/i,
+        handler: "CacheFirst",
+        options: {
+          cacheName: "dua-data",
+          expiration: {
+            maxEntries: 50,
+            maxAgeSeconds: 365 * 24 * 60 * 60,
+          },
+        },
+      },
+    ],
+  },
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 
-export default nextConfig;
+export default withPWA(nextConfig);
