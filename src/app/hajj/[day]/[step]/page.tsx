@@ -9,6 +9,9 @@ import FontSizeControl from "@/components/FontSizeControl";
 import { useSwipeNavigation } from "@/hooks/useSwipeNavigation";
 import { usePreferences } from "@/hooks/usePreferences";
 import hajjData from "@/data/hajj.json";
+import { isVerifiedReference } from "@/lib/reference";
+import StepGuidance from "@/components/StepGuidance";
+import StepMetaPanel from "@/components/StepMetaPanel";
 
 // Build flat list of all steps with day/step references
 interface FlatStep {
@@ -44,6 +47,11 @@ export default function HajjStepReader() {
   );
   const current = flatSteps[flatIndex];
   const isValid = current !== undefined;
+  const visibleDuas = isValid
+    ? current.step.duas.filter(
+        (dua) => !prefs.verifiedOnly || isVerifiedReference(dua.reference)
+      )
+    : [];
 
   // Save progress
   useEffect(() => {
@@ -128,6 +136,14 @@ export default function HajjStepReader() {
         }`}
       >
         {/* Instructions */}
+        <StepGuidance category={current.step.category} />
+        <StepMetaPanel
+          stepId={current.step.id}
+          timing={current.step.timing}
+          location={current.step.location}
+          variantNotes={current.step.variantNotes}
+          checklist={current.step.checklist}
+        />
         <div className="px-6 py-4 border-b border-border">
           <p className="text-sm text-foreground/70 leading-relaxed font-sans">
             {current.step.instructions}
@@ -136,7 +152,15 @@ export default function HajjStepReader() {
 
         {/* Duas */}
         <div className="divide-y divide-border">
-          {current.step.duas.map((dua, i) => (
+          {visibleDuas.length === 0 && (
+            <div className="px-6 py-6">
+              <p className="text-sm text-muted text-center font-sans">
+                No Quran/Sahih-tagged dua in this step. Disable verified-only in
+                Settings to view all.
+              </p>
+            </div>
+          )}
+          {visibleDuas.map((dua, i) => (
             <DuaCard
               key={dua.id}
               dua={dua}
@@ -144,7 +168,7 @@ export default function HajjStepReader() {
               showTransliteration={prefs.showTransliteration}
               showTranslation={prefs.showTranslation}
               index={i}
-              total={current.step.duas.length}
+              total={visibleDuas.length}
             />
           ))}
         </div>

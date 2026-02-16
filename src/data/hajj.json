@@ -6,13 +6,54 @@
     "titleAr": "التحضير للحج",
     "steps": [
       {
+        "id": "hajj-prep-intention",
+        "ritual": "hajj",
+        "category": "preparation",
+        "title": "Renew Intention & Learn Your Route",
+        "titleAr": "تجديد النية ومعرفة المسار",
+        "sequence": 1,
+        "location": "Makkah (hotel/camp)",
+        "timing": "Evening before 8th",
+        "variantNotes": [
+          "Perform Hajj as Tamattu', Qiran, or Ifrad according to your group plan.",
+          "If you are unsure, follow your group scholar's exact sequencing."
+        ],
+        "checklist": [
+          "Intention renewed sincerely for Allah",
+          "Know Mina/Arafah/Muzdalifah transport plan",
+          "Keep emergency contacts and camp info"
+        ],
+        "instructions": "Review your Hajj type, group schedule, and safety instructions. Keep your intention sincere and avoid arguments or distractions.",
+        "duas": [
+          {
+            "id": "hajj-prep-niyyah-general",
+            "arabic": "اللَّهُمَّ إِنِّي أُرِيدُ الْحَجَّ فَيَسِّرْهُ لِي وَتَقَبَّلْهُ مِنِّي",
+            "transliteration": "Allahumma inni ureedul-hajja fayassirhu li wa taqabbalhu minni.",
+            "translation": "O Allah, I intend Hajj, so make it easy for me and accept it from me.",
+            "reference": "Reported in fiqh manuals",
+            "note": "State intention clearly and proceed with your group plan."
+          }
+        ]
+      },
+      {
         "id": "hajj-prep-ihram",
         "ritual": "hajj",
         "category": "ihram",
-        "title": "Ihram for Hajj",
+        "title": "Enter Ihram for Hajj",
         "titleAr": "الإحرام للحج",
-        "sequence": 1,
-        "instructions": "Perform ghusl, wear Ihram garments, and make your intention for Hajj at the Miqat or from your place of stay in Makkah.",
+        "sequence": 2,
+        "location": "Makkah residence or Miqat",
+        "timing": "8th Dhul Hijjah before departure",
+        "variantNotes": [
+          "Tamattu': enter fresh Ihram for Hajj on 8th.",
+          "Qiran/Ifrad: many pilgrims remain in Ihram from earlier."
+        ],
+        "checklist": [
+          "Ghusl completed",
+          "Ihram garments ready",
+          "No prohibited Ihram actions"
+        ],
+        "instructions": "Perform ghusl, wear Ihram garments, and make intention for Hajj before departure to Mina.",
         "duas": [
           {
             "id": "hajj-niyyah",
@@ -25,9 +66,66 @@
             "id": "hajj-talbiyah",
             "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ لَا شَرِيكَ لَكَ",
             "transliteration": "Labbayk Allahumma Labbayk. Labbayk la shareeka laka Labbayk. Innal-hamda wan-ni'mata laka wal-mulk. La shareeka lak.",
-            "translation": "Here I am, O Allah, here I am. Here I am, You have no partner, here I am. Verily all praise, grace and sovereignty belong to You. You have no partner.",
-            "reference": "Sahih al-Bukhari 1549, Sahih Muslim 1184",
-            "note": "Recite the Talbiyah continuously from this point onward."
+            "translation": "Here I am, O Allah, here I am. You have no partner. Truly all praise, favor, and dominion belong to You.",
+            "reference": "Sahih al-Bukhari 1549, Sahih Muslim 1184"
+          }
+        ]
+      },
+      {
+        "id": "hajj-prep-travel-readiness",
+        "ritual": "hajj",
+        "category": "preparation",
+        "title": "Prepare Essentials for Mina/Arafah",
+        "titleAr": "تجهيز المستلزمات لمنى وعرفة",
+        "sequence": 3,
+        "location": "Makkah residence",
+        "timing": "Before leaving for Mina",
+        "variantNotes": [
+          "Keep medicines and hydration salts with you.",
+          "Use lightweight bag and avoid unnecessary items."
+        ],
+        "checklist": [
+          "ID, card, and permit available",
+          "Water, meds, slippers packed",
+          "Phone fully charged + power bank"
+        ],
+        "instructions": "Pack only essentials and prepare for intense heat and crowd conditions.",
+        "duas": [
+          {
+            "id": "hajj-prep-protection",
+            "arabic": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+            "transliteration": "HasbunAllahu wa ni'mal wakeel.",
+            "translation": "Allah is sufficient for us, and He is the best disposer of affairs.",
+            "reference": "Quran 3:173"
+          }
+        ]
+      },
+      {
+        "id": "hajj-prep-night-dhikr",
+        "ritual": "hajj",
+        "category": "preparation",
+        "title": "Night Before Hajj: Dhikr & Rest",
+        "titleAr": "ليلة الحج: ذكر وراحة",
+        "sequence": 4,
+        "location": "Makkah",
+        "timing": "Night before 8th",
+        "variantNotes": [
+          "Avoid long late-night activity to preserve energy.",
+          "Prioritize Fajr readiness and group departure timing."
+        ],
+        "checklist": [
+          "Sleep early",
+          "Set departure alarms",
+          "Keep calm and focused"
+        ],
+        "instructions": "Rest well and keep your tongue busy with Talbiyah and istighfar.",
+        "duas": [
+          {
+            "id": "hajj-prep-istighfar",
+            "arabic": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",
+            "transliteration": "Astaghfirullaha wa atubu ilayh.",
+            "translation": "I seek Allah's forgiveness and repent to Him.",
+            "reference": "Sahih Muslim 2702"
           }
         ]
       }
@@ -40,27 +138,89 @@
     "titleAr": "اليوم الأول: منى",
     "steps": [
       {
-        "id": "hajj-d1-mina-travel",
+        "id": "hajj-d1-depart-mina",
         "ritual": "hajj",
         "category": "mina",
-        "title": "Travel to Mina",
-        "titleAr": "السفر إلى منى",
+        "title": "Depart to Mina",
+        "titleAr": "الانطلاق إلى منى",
         "sequence": 1,
-        "instructions": "Depart for Mina after sunrise. Pray Dhuhr, Asr, Maghrib, Isha (shortened but not combined) and Fajr in Mina. Spend the night in Mina. Continue reciting Talbiyah.",
+        "location": "Makkah to Mina",
+        "timing": "After sunrise",
+        "variantNotes": [
+          "Remain patient in transport delays and congestion.",
+          "Keep Talbiyah frequent throughout movement."
+        ],
+        "checklist": [
+          "Stay with your group",
+          "Hydrate regularly",
+          "Avoid crowd pushing"
+        ],
+        "instructions": "Travel to Mina after sunrise while reciting Talbiyah.",
         "duas": [
           {
             "id": "hajj-d1-travel",
             "arabic": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
-            "transliteration": "Bismillahi tawakkaltu 'alAllah, wa la hawla wa la quwwata illa billah.",
-            "translation": "In the name of Allah, I place my trust in Allah. There is no power or strength except with Allah.",
+            "transliteration": "Bismillahi tawakkaltu 'ala Allah, wa la hawla wa la quwwata illa billah.",
+            "translation": "In the name of Allah, I rely upon Allah; there is no power except with Allah.",
             "reference": "Abu Dawud 5095, Tirmidhi 3426"
-          },
+          }
+        ]
+      },
+      {
+        "id": "hajj-d1-prayers-mina",
+        "ritual": "hajj",
+        "category": "mina",
+        "title": "Pray in Mina (Dhuhr to Fajr)",
+        "titleAr": "صلوات منى من الظهر إلى الفجر",
+        "sequence": 2,
+        "location": "Mina camp",
+        "timing": "8th day and night",
+        "variantNotes": [
+          "Four-rakah prayers are shortened to two (except Maghrib).",
+          "Prayers are prayed separately, not combined, in Mina."
+        ],
+        "checklist": [
+          "Pray on time",
+          "Keep wudu when possible",
+          "Prepare for early departure to Arafah"
+        ],
+        "instructions": "Pray Dhuhr, Asr, Maghrib, Isha and Fajr in Mina according to Sunnah practice.",
+        "duas": [
           {
-            "id": "hajj-d1-dhikr",
-            "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ فِي سَفَرِي هَذَا الْبِرَّ وَالتَّقْوَى وَمِنَ الْعَمَلِ مَا تَرْضَى",
-            "transliteration": "Allahumma inni as'aluka fi safari hadha al-birra wat-taqwa wa minal-'amali ma tarda.",
-            "translation": "O Allah, I ask You in this journey of mine for righteousness, piety, and deeds that please You.",
-            "reference": "Sahih Muslim 1342"
+            "id": "hajj-d1-after-prayer-dhikr",
+            "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَاللَّهُ أَكْبَرُ",
+            "transliteration": "SubhanAllah walhamdulillah wallahu Akbar.",
+            "translation": "Glory be to Allah, praise be to Allah, and Allah is the Greatest.",
+            "reference": "Sahih Muslim 597"
+          }
+        ]
+      },
+      {
+        "id": "hajj-d1-night-mina",
+        "ritual": "hajj",
+        "category": "mina",
+        "title": "Overnight in Mina",
+        "titleAr": "المبيت بمنى",
+        "sequence": 3,
+        "location": "Mina",
+        "timing": "Night of 9th",
+        "variantNotes": [
+          "Rest is part of Sunnah preparation for Arafah.",
+          "Minimize unnecessary movement at night."
+        ],
+        "checklist": [
+          "Sleep enough",
+          "Set group meeting point",
+          "Keep pebbles plan for later days"
+        ],
+        "instructions": "Spend the night in Mina and prepare physically and spiritually for Arafah.",
+        "duas": [
+          {
+            "id": "hajj-d1-night-dua",
+            "arabic": "اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا",
+            "transliteration": "Allahumma bismika amutu wa ahya.",
+            "translation": "O Allah, in Your name I die and I live.",
+            "reference": "Sahih al-Bukhari 6324"
           }
         ]
       }
@@ -69,24 +229,63 @@
   {
     "day": 2,
     "date": "9th Dhul Hijjah - Day of Arafah",
-    "title": "Day 2: Arafah",
-    "titleAr": "اليوم الثاني: عرفة",
+    "title": "Day 2: Arafah and Muzdalifah",
+    "titleAr": "اليوم الثاني: عرفة ومزدلفة",
     "steps": [
       {
-        "id": "hajj-d2-arafah-travel",
+        "id": "hajj-d2-depart-arafah",
         "ritual": "hajj",
         "category": "arafah",
-        "title": "Travel to Arafah",
-        "titleAr": "السفر إلى عرفة",
+        "title": "Move from Mina to Arafah",
+        "titleAr": "الانتقال من منى إلى عرفة",
         "sequence": 1,
-        "instructions": "After Fajr prayer in Mina, proceed to Arafah. Stay within the boundaries of Arafah. The standing (Wuquf) at Arafah is the pillar of Hajj.",
+        "location": "Mina to Arafah",
+        "timing": "After Fajr",
+        "variantNotes": [
+          "Ensure you stay within Arafah boundaries before sunset.",
+          "Keep Talbiyah and avoid idle talk."
+        ],
+        "checklist": [
+          "Stay with group",
+          "Verify Arafah boundary",
+          "Prepare for long standing dua"
+        ],
+        "instructions": "Proceed to Arafah and settle in your designated area before Dhuhr.",
         "duas": [
           {
             "id": "hajj-d2-travel-talbiyah",
-            "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ لَا شَرِيكَ لَكَ",
-            "transliteration": "Labbayk Allahumma Labbayk. Labbayk la shareeka laka Labbayk. Innal-hamda wan-ni'mata laka wal-mulk. La shareeka lak.",
-            "translation": "Here I am, O Allah, here I am. Here I am, You have no partner, here I am. Verily all praise, grace and sovereignty belong to You. You have no partner.",
+            "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ",
+            "transliteration": "Labbayk Allahumma Labbayk, Labbayk la shareeka laka Labbayk.",
+            "translation": "Here I am, O Allah, here I am. You have no partner.",
             "reference": "Sahih al-Bukhari 1549"
+          }
+        ]
+      },
+      {
+        "id": "hajj-d2-combined-prayer",
+        "ritual": "hajj",
+        "category": "arafah",
+        "title": "Combined Dhuhr and Asr at Arafah",
+        "titleAr": "جمع الظهر والعصر بعرفة",
+        "sequence": 2,
+        "location": "Arafah",
+        "timing": "After zawal (midday)",
+        "variantNotes": [
+          "Pray Dhuhr and Asr combined and shortened.",
+          "Listen to khutbah if available in your camp."
+        ],
+        "checklist": [
+          "Pray with concentration",
+          "Start focused dua immediately after prayer"
+        ],
+        "instructions": "After midday, pray Dhuhr and Asr together as performed in Hajj.",
+        "duas": [
+          {
+            "id": "hajj-d2-after-salah",
+            "arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
+            "transliteration": "Allahumma a'inni 'ala dhikrika wa shukrika wa husni 'ibadatik.",
+            "translation": "O Allah, help me remember You, thank You, and worship You well.",
+            "reference": "Abu Dawud 1522"
           }
         ]
       },
@@ -94,39 +293,35 @@
         "id": "hajj-d2-wuquf",
         "ritual": "hajj",
         "category": "arafah",
-        "title": "Wuquf at Arafah",
+        "title": "Wuquf: Main Standing of Hajj",
         "titleAr": "الوقوف بعرفة",
-        "sequence": 2,
-        "instructions": "This is the most important day of Hajj. The Prophet (peace be upon him) said: 'Hajj is Arafah.' Pray Dhuhr and Asr combined and shortened. Then spend the rest of the day in sincere dua, dhikr, and repentance until sunset. Face the Qiblah and raise your hands in supplication.",
+        "sequence": 3,
+        "location": "Arafah",
+        "timing": "From after Asr until sunset",
+        "variantNotes": [
+          "This is the pillar of Hajj: 'Hajj is Arafah'.",
+          "Face Qiblah, raise hands, and make long dua."
+        ],
+        "checklist": [
+          "Intense repentance",
+          "Dua for family and Ummah",
+          "Avoid wasting this window"
+        ],
+        "instructions": "Spend this period in deep dua, istighfar, and dhikr until sunset.",
         "duas": [
           {
             "id": "hajj-d2-arafah-best",
             "arabic": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
-            "transliteration": "La ilaha illAllahu wahdahu la shareeka lah, lahul-mulku wa lahul-hamdu wa huwa 'ala kulli shay'in qadeer.",
-            "translation": "There is no god but Allah alone, with no partner. His is the dominion and His is the praise, and He is capable of all things.",
-            "reference": "Tirmidhi 3585",
-            "note": "The Prophet (peace be upon him) said: 'The best dua is the dua of the Day of Arafah, and the best thing that I and the Prophets before me said is: La ilaha illAllahu wahdahu la shareeka lah...'"
+            "transliteration": "La ilaha illAllahu wahdahu la shareeka lah, lahul-mulku wa lahul-hamd wa huwa 'ala kulli shay'in qadeer.",
+            "translation": "There is no god but Allah alone, without partner. His is dominion and praise, and He has power over all things.",
+            "reference": "Tirmidhi 3585"
           },
           {
             "id": "hajj-d2-arafah-forgiveness",
             "arabic": "اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
             "transliteration": "Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni.",
-            "translation": "O Allah, You are the Pardoner, You love to pardon, so pardon me.",
-            "reference": "Tirmidhi 3513, Ibn Majah 3850"
-          },
-          {
-            "id": "hajj-d2-arafah-repentance",
-            "arabic": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ",
-            "transliteration": "Astaghfirullahallathi la ilaha illa huwal-hayyul-qayyoom wa atoobu ilayh.",
-            "translation": "I seek forgiveness from Allah, there is no god but He, the Living, the Self-Sustaining, and I repent to Him.",
-            "reference": "Abu Dawud 1517, Tirmidhi 3577"
-          },
-          {
-            "id": "hajj-d2-arafah-protection",
-            "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ وَمِنْ عَذَابِ النَّارِ وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ وَمِنْ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ",
-            "transliteration": "Allahumma inni a'udhu bika min 'adhabil-qabri wa min 'adhabin-naar, wa min fitnatil-mahya wal-mamaat, wa min fitnatil-masihid-dajjaal.",
-            "translation": "O Allah, I seek refuge in You from the punishment of the grave, the punishment of the Fire, the trials of life and death, and the trial of the False Messiah.",
-            "reference": "Sahih al-Bukhari 1377, Sahih Muslim 588"
+            "translation": "O Allah, You are Pardoning and love pardon, so pardon me.",
+            "reference": "Tirmidhi 3513"
           }
         ]
       },
@@ -134,25 +329,28 @@
         "id": "hajj-d2-muzdalifah",
         "ritual": "hajj",
         "category": "muzdalifah",
-        "title": "Night at Muzdalifah",
-        "titleAr": "المبيت بمزدلفة",
-        "sequence": 3,
-        "instructions": "After sunset at Arafah, depart for Muzdalifah. Do NOT pray Maghrib at Arafah. Upon arriving at Muzdalifah, combine Maghrib and Isha prayers (Isha shortened to 2 rakat). Collect 49-70 pebbles for stoning. Sleep under the open sky. Pray Fajr at its earliest time.",
+        "title": "Move to Muzdalifah, Pray and Rest",
+        "titleAr": "الذهاب إلى مزدلفة والصلاة والمبيت",
+        "sequence": 4,
+        "location": "Muzdalifah",
+        "timing": "After sunset to pre-dawn",
+        "variantNotes": [
+          "Do not pray Maghrib before arriving at Muzdalifah.",
+          "Collect pebbles for Rami (typically 49 or 70 total for plan)."
+        ],
+        "checklist": [
+          "Maghrib+Isha combined",
+          "Pebbles collected",
+          "Rest before Fajr"
+        ],
+        "instructions": "After sunset, depart Arafah for Muzdalifah, combine Maghrib and Isha, and spend the night there.",
         "duas": [
           {
-            "id": "hajj-d2-muzdalifah-dua",
-            "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَجْمَعَ لِي خَيْرَ هَذَا الْيَوْمِ وَخَيْرَ مَا فِيهِ، وَأَعُوذُ بِكَ مِنْ شَرِّ هَذَا الْيَوْمِ وَشَرِّ مَا فِيهِ",
-            "transliteration": "Allahumma inni as'aluka an tajma'a li khayra hadhal-yawmi wa khayra ma fih, wa a'udhu bika min sharri hadhal-yawmi wa sharri ma fih.",
-            "translation": "O Allah, I ask You to gather for me the good of this day and the good that is in it, and I seek refuge in You from the evil of this day and the evil that is in it.",
-            "reference": "Sahih Muslim 2723"
-          },
-          {
-            "id": "hajj-d2-muzdalifah-mashar",
-            "arabic": "اللَّهُمَّ كَمَا أَوْقَفْتَنَا فِيهِ وَأَرَيْتَنَا إِيَّاهُ فَوَفِّقْنَا لِذِكْرِكَ كَمَا هَدَيْتَنَا، وَاغْفِرْ لَنَا وَارْحَمْنَا كَمَا وَعَدْتَنَا",
-            "transliteration": "Allahumma kama awqaftana fihi wa araytana iyyahu fawaffiqna li-dhikrika kama hadaytana, waghfir lana warhamna kama wa'adtana.",
-            "translation": "O Allah, as You have brought us to stand here and shown us this place, grant us success in remembering You as You have guided us, and forgive us and have mercy on us as You have promised us.",
-            "reference": "Quran 2:198 context",
-            "note": "At Muzdalifah, stand at al-Mash'ar al-Haram and make dua facing the Qiblah until the sky becomes very bright before sunrise."
+            "id": "hajj-d2-muzdalifah-dhikr",
+            "arabic": "فَاذْكُرُوا اللَّهَ عِنْدَ الْمَشْعَرِ الْحَرَامِ",
+            "transliteration": "Fadhkurullaha 'indal-mash'aril-haram.",
+            "translation": "Remember Allah at al-Mash'ar al-Haram.",
+            "reference": "Quran 2:198"
           }
         ]
       }
@@ -160,26 +358,65 @@
   },
   {
     "day": 3,
-    "date": "10th Dhul Hijjah - Eid al-Adha",
-    "title": "Day 3: Eid al-Adha",
-    "titleAr": "اليوم الثالث: عيد الأضحى",
+    "date": "10th Dhul Hijjah - Day of Nahr (Eid)",
+    "title": "Day 3: Eid Core Rituals",
+    "titleAr": "اليوم الثالث: أعمال يوم النحر",
     "steps": [
+      {
+        "id": "hajj-d3-fajr-muzdalifah",
+        "ritual": "hajj",
+        "category": "muzdalifah",
+        "title": "Fajr and Dhikr at Muzdalifah",
+        "titleAr": "فجر وذكر مزدلفة",
+        "sequence": 1,
+        "location": "Muzdalifah",
+        "timing": "Pre-sunrise",
+        "variantNotes": [
+          "After Fajr, make dhikr until brightness before moving.",
+          "Weak pilgrims may move earlier according to scholars."
+        ],
+        "checklist": [
+          "Fajr on time",
+          "Dhikr after prayer",
+          "Move with group to Mina"
+        ],
+        "instructions": "Pray Fajr early, make dhikr, then depart to Mina before sunrise.",
+        "duas": [
+          {
+            "id": "hajj-d3-muzdalifah-dua",
+            "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+            "transliteration": "Rabbana atina fid-dunya hasanah wa fil-akhirati hasanah wa qina 'adhaban-nar.",
+            "translation": "Our Lord, grant us good in this world and good in the Hereafter and protect us from the Fire.",
+            "reference": "Quran 2:201"
+          }
+        ]
+      },
       {
         "id": "hajj-d3-rami-aqabah",
         "ritual": "hajj",
         "category": "rami",
-        "title": "Stoning Jamarat al-Aqabah",
-        "titleAr": "رمي جمرة العقبة",
-        "sequence": 1,
-        "instructions": "After sunrise, proceed from Muzdalifah to Mina. Stone ONLY the large Jamrah (Jamarat al-Aqabah) with 7 pebbles. Say 'Allahu Akbar' with each throw. Stop reciting the Talbiyah before stoning.",
+        "title": "Rami of Jamarat al-Aqabah (7 Pebbles)",
+        "titleAr": "رمي جمرة العقبة بسبع حصيات",
+        "sequence": 2,
+        "location": "Mina - Jamarat",
+        "timing": "After sunrise onward",
+        "variantNotes": [
+          "Only the large Jamrah is stoned on 10th.",
+          "Talbiyah stops before beginning this Rami."
+        ],
+        "checklist": [
+          "7 pebbles thrown",
+          "Takbeer each throw",
+          "Avoid unsafe crowd zones"
+        ],
+        "instructions": "Stone Jamarat al-Aqabah with seven pebbles while saying takbeer each throw.",
         "duas": [
           {
             "id": "hajj-d3-rami-takbeer",
             "arabic": "بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ",
-            "transliteration": "Bismillahi, Allahu Akbar",
+            "transliteration": "Bismillahi, Allahu Akbar.",
             "translation": "In the name of Allah, Allah is the Greatest.",
-            "reference": "Sahih Muslim 1218",
-            "note": "Say this with each pebble you throw. Throw 7 pebbles total at the large pillar."
+            "reference": "Sahih Muslim 1218"
           }
         ]
       },
@@ -187,17 +424,28 @@
         "id": "hajj-d3-sacrifice",
         "ritual": "hajj",
         "category": "sacrifice",
-        "title": "Qurbani (Sacrifice)",
-        "titleAr": "الأضحية",
-        "sequence": 2,
-        "instructions": "After stoning, perform the animal sacrifice (Qurbani). You may delegate this to an organization. This commemorates Prophet Ibrahim's willingness to sacrifice his son.",
+        "title": "Qurbani / Hady",
+        "titleAr": "الهدي أو الأضحية",
+        "sequence": 3,
+        "location": "Mina / authorized slaughter service",
+        "timing": "10th day after Rami",
+        "variantNotes": [
+          "Tamattu' and Qiran require hady.",
+          "Ifrad does not require hady unless voluntary."
+        ],
+        "checklist": [
+          "Hady voucher confirmed",
+          "Order of major rites tracked",
+          "Proceed to haircut after sacrifice"
+        ],
+        "instructions": "Perform or delegate sacrifice according to your Hajj type.",
         "duas": [
           {
             "id": "hajj-d3-sacrifice-dua",
-            "arabic": "بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ، اللَّهُمَّ إِنَّ هَذَا مِنْكَ وَلَكَ",
-            "transliteration": "Bismillahi wallahu Akbar. Allahumma inna hadha minka wa lak.",
-            "translation": "In the name of Allah, and Allah is the Greatest. O Allah, this is from You and for You.",
-            "reference": "Abu Dawud 2795, Sahih Muslim 1966"
+            "arabic": "بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ، اللَّهُمَّ هَذَا مِنْكَ وَلَكَ",
+            "transliteration": "Bismillahi wallahu Akbar, Allahumma hadha minka wa laka.",
+            "translation": "In the name of Allah, Allah is the Greatest. O Allah, this is from You and for You.",
+            "reference": "Sahih Muslim 1966"
           }
         ]
       },
@@ -205,17 +453,28 @@
         "id": "hajj-d3-halq",
         "ritual": "hajj",
         "category": "halq",
-        "title": "Shaving or Trimming Hair",
+        "title": "Halq/Taqsir (Hair)",
         "titleAr": "الحلق أو التقصير",
-        "sequence": 3,
-        "instructions": "After the sacrifice, men shave their head (Halq) or trim hair (Taqsir). Women trim a fingertip's length. This is the first partial release from Ihram (Tahallul al-Asghar). Everything becomes permissible except intimacy with your spouse.",
+        "sequence": 4,
+        "location": "Mina",
+        "timing": "After sacrifice",
+        "variantNotes": [
+          "Men: shaving is more virtuous; trimming valid.",
+          "Women: trim fingertip-length only."
+        ],
+        "checklist": [
+          "Hair cut completed",
+          "First tahallul understood",
+          "Move to Makkah for Ifadah"
+        ],
+        "instructions": "Complete hair removal/trimming to enter first release from Ihram.",
         "duas": [
           {
             "id": "hajj-d3-halq-dua",
-            "arabic": "الْحَمْدُ لِلَّهِ عَلَى مَا هَدَانَا، اللَّهُمَّ اجْعَلْ كُلَّ شَعْرَةٍ نُورًا يَوْمَ الْقِيَامَةِ",
-            "transliteration": "Alhamdu lillahi 'ala ma hadana. Allahummaj'al kulla sha'ratin nuran yawmal-qiyamah.",
-            "translation": "All praise is for Allah for guiding us. O Allah, make every hair a light on the Day of Judgment.",
-            "reference": "General supplication"
+            "arabic": "اللَّهُمَّ اغْفِرْ لِلْمُحَلِّقِينَ",
+            "transliteration": "Allahummaghfir lil-muhalliqeen.",
+            "translation": "O Allah, forgive those who shave (their heads).",
+            "reference": "Sahih al-Bukhari 1727, Sahih Muslim 1301"
           }
         ]
       },
@@ -225,16 +484,26 @@
         "category": "tawaf",
         "title": "Tawaf al-Ifadah",
         "titleAr": "طواف الإفاضة",
-        "sequence": 4,
-        "instructions": "Go to Masjid al-Haram and perform Tawaf al-Ifadah — 7 circuits around the Kaaba. This is a pillar of Hajj and cannot be skipped. No Raml or Idtiba in this Tawaf. Pray 2 rakat behind Maqam Ibrahim after completing.",
+        "sequence": 5,
+        "location": "Masjid al-Haram",
+        "timing": "10th onward (best same day)",
+        "variantNotes": [
+          "A pillar of Hajj; cannot be omitted.",
+          "No idtiba/raml required as in initial Umrah tawaf."
+        ],
+        "checklist": [
+          "7 circuits complete",
+          "2 rakah after tawaf",
+          "Track if Sa'i still due"
+        ],
+        "instructions": "Perform seven circuits of Tawaf al-Ifadah and pray two rakah.",
         "duas": [
           {
             "id": "hajj-d3-tawaf-dua",
             "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-            "transliteration": "Rabbana aatina fid-dunya hasanatan wa fil-aakhirati hasanatan wa qina 'adhaban-naar.",
-            "translation": "Our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of the Fire.",
-            "reference": "Quran 2:201",
-            "note": "Recite the same duas as in Umrah Tawaf. This dua is specifically for between the Yemeni Corner and the Black Stone."
+            "transliteration": "Rabbana atina fid-dunya hasanah wa fil-akhirati hasanah wa qina 'adhaban-nar.",
+            "translation": "Our Lord, grant us good in this world and in the Hereafter, and save us from the Fire.",
+            "reference": "Quran 2:201"
           }
         ]
       },
@@ -242,16 +511,27 @@
         "id": "hajj-d3-sai",
         "ritual": "hajj",
         "category": "sai",
-        "title": "Sa'i for Hajj",
-        "titleAr": "السعي للحج",
-        "sequence": 5,
-        "instructions": "Perform Sa'i between Safa and Marwa — 7 laps total. This completes the full release from Ihram (Tahallul al-Akbar). Everything is now permissible. Return to Mina.",
+        "title": "Sa'i (If Required)",
+        "titleAr": "السعي (عند الحاجة)",
+        "sequence": 6,
+        "location": "Safa-Marwa",
+        "timing": "After Ifadah tawaf",
+        "variantNotes": [
+          "Tamattu': Sa'i required now.",
+          "Qiran/Ifrad: if Sa'i was done with Tawaf al-Qudum, may not repeat."
+        ],
+        "checklist": [
+          "Confirm with scholar if Sa'i is due",
+          "7 laps completed if required",
+          "Return to Mina"
+        ],
+        "instructions": "Perform Sa'i if due for your Hajj type, then return to Mina.",
         "duas": [
           {
             "id": "hajj-d3-sai-dua",
             "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ الْأَعَزُّ الْأَكْرَمُ",
-            "transliteration": "Rabbigh-fir warham wa anta al-a'azzul-akram.",
-            "translation": "My Lord, forgive and have mercy, for You are the Most Mighty, the Most Noble.",
+            "transliteration": "Rabbighfir warham wa anta al-a'azzul-akram.",
+            "translation": "My Lord, forgive and have mercy; You are the Mightiest, Most Noble.",
             "reference": "Reported by Ibn Abi Shaybah"
           }
         ]
@@ -262,39 +542,92 @@
     "day": 4,
     "date": "11th Dhul Hijjah - First Day of Tashreeq",
     "title": "Day 4: Tashreeq Day 1",
-    "titleAr": "اليوم الرابع: التشريق ١",
+    "titleAr": "اليوم الرابع: التشريق الأول",
     "steps": [
       {
-        "id": "hajj-d4-rami",
+        "id": "hajj-d4-stay-mina",
+        "ritual": "hajj",
+        "category": "mina",
+        "title": "Remain in Mina and Prepare for Rami",
+        "titleAr": "البقاء بمنى والاستعداد للرمي",
+        "sequence": 1,
+        "location": "Mina",
+        "timing": "Morning to Dhuhr",
+        "variantNotes": [
+          "Use cooler time windows for movement.",
+          "Avoid exiting before fulfilling required rites."
+        ],
+        "checklist": [
+          "Pebbles ready",
+          "Rami route planned",
+          "Hydration maintained"
+        ],
+        "instructions": "Stay in Mina and prepare calmly for post-Dhuhr stoning.",
+        "duas": [
+          {
+            "id": "hajj-d4-morning-dhikr",
+            "arabic": "اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ لَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ",
+            "transliteration": "Allahu Akbar Allahu Akbar la ilaha illAllah wallahu Akbar.",
+            "translation": "Allah is the Greatest. There is no god but Allah. Allah is the Greatest.",
+            "reference": "Reported by Ibn Abi Shaybah"
+          }
+        ]
+      },
+      {
+        "id": "hajj-d4-rami-all",
         "ritual": "hajj",
         "category": "rami",
-        "title": "Stoning All Three Jamarat",
+        "title": "Rami: Small, Middle, and Large Jamarat",
         "titleAr": "رمي الجمرات الثلاث",
-        "sequence": 1,
-        "instructions": "After Dhuhr prayer, stone all three Jamarat in order: Small (Sughra), then Medium (Wusta), then Large (Aqabah). Throw 7 pebbles at each, saying 'Allahu Akbar' with each throw. After the small and medium pillars, step aside and make dua. After the large pillar, leave without making dua. Stay in Mina overnight.",
+        "sequence": 2,
+        "location": "Jamarat",
+        "timing": "After Dhuhr",
+        "variantNotes": [
+          "Order matters: Small -> Middle -> Large.",
+          "After small and middle, stand aside for dua."
+        ],
+        "checklist": [
+          "21 pebbles total",
+          "Order maintained",
+          "Dua after first two pillars"
+        ],
+        "instructions": "Stone all three Jamarat in order with seven pebbles each.",
         "duas": [
           {
             "id": "hajj-d4-rami-takbeer",
-            "arabic": "بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ، رَغْمًا لِلشَّيْطَانِ وَحِزْبِهِ",
-            "transliteration": "Bismillahi, Allahu Akbar, raghman lish-shaytani wa hizbihi.",
-            "translation": "In the name of Allah, Allah is the Greatest, in defiance of Shaytan and his party.",
-            "reference": "Reported in various collections"
-          },
+            "arabic": "بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ",
+            "transliteration": "Bismillahi, Allahu Akbar.",
+            "translation": "In the name of Allah, Allah is the Greatest.",
+            "reference": "Sahih Muslim 1218"
+          }
+        ]
+      },
+      {
+        "id": "hajj-d4-night-mina",
+        "ritual": "hajj",
+        "category": "mina",
+        "title": "Overnight in Mina",
+        "titleAr": "المبيت بمنى",
+        "sequence": 3,
+        "location": "Mina",
+        "timing": "Night of 12th",
+        "variantNotes": [
+          "Overnight stay is required for most pilgrims.",
+          "Prepare for next day's Rami and possible early departure."
+        ],
+        "checklist": [
+          "Camp return complete",
+          "Rami plan for day 5",
+          "Rest and recovery"
+        ],
+        "instructions": "Spend the night in Mina after completing stoning.",
+        "duas": [
           {
-            "id": "hajj-d4-after-sughra",
-            "arabic": "اللَّهُمَّ اجْعَلْهُ حَجًّا مَبْرُورًا وَذَنْبًا مَغْفُورًا",
-            "transliteration": "Allahummaj'alhu hajjan mabroran wa dhanban maghfura.",
-            "translation": "O Allah, make it an accepted Hajj and a forgiven sin.",
-            "reference": "General supplication",
-            "note": "After stoning the small and medium pillars, step aside facing the Qiblah and make extended dua."
-          },
-          {
-            "id": "hajj-d4-tashreeq-takbeer",
-            "arabic": "اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ، لَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ وَلِلَّهِ الْحَمْدُ",
-            "transliteration": "Allahu Akbar Allahu Akbar, la ilaha illAllah, wallahu Akbar Allahu Akbar wa lillahil-hamd.",
-            "translation": "Allah is the Greatest, Allah is the Greatest. There is no god but Allah. Allah is the Greatest, Allah is the Greatest, and all praise is for Allah.",
-            "reference": "Reported by Ibn Abi Shaybah",
-            "note": "Recite the Takbeer of Tashreeq after every prayer during the days of Tashreeq."
+            "id": "hajj-d4-night-istighfar",
+            "arabic": "رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ",
+            "transliteration": "Rabbighfir li wa tub 'alayya.",
+            "translation": "My Lord, forgive me and accept my repentance.",
+            "reference": "Sahih al-Bukhari 6307"
           }
         ]
       }
@@ -304,31 +637,92 @@
     "day": 5,
     "date": "12th Dhul Hijjah - Second Day of Tashreeq",
     "title": "Day 5: Tashreeq Day 2",
-    "titleAr": "اليوم الخامس: التشريق ٢",
+    "titleAr": "اليوم الخامس: التشريق الثاني",
     "steps": [
       {
-        "id": "hajj-d5-rami",
+        "id": "hajj-d5-rami-all",
         "ritual": "hajj",
         "category": "rami",
-        "title": "Stoning All Three Jamarat",
-        "titleAr": "رمي الجمرات الثلاث",
+        "title": "Repeat Rami of All Three Jamarat",
+        "titleAr": "إعادة رمي الجمرات الثلاث",
         "sequence": 1,
-        "instructions": "After Dhuhr, repeat the stoning of all three Jamarat as on Day 4. After completing, you may leave Mina before Maghrib if you wish (Nafr al-Awwal). If you stay, you must stone again on the 13th.",
+        "location": "Jamarat",
+        "timing": "After Dhuhr",
+        "variantNotes": [
+          "Same order: Small -> Middle -> Large.",
+          "Maintain safety and avoid peak compression points."
+        ],
+        "checklist": [
+          "21 pebbles thrown",
+          "Dua after first two",
+          "Plan Nafr (departure) decision"
+        ],
+        "instructions": "Perform stoning again in correct order after Dhuhr.",
         "duas": [
           {
             "id": "hajj-d5-rami-takbeer",
-            "arabic": "بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ",
-            "transliteration": "Bismillahi, Allahu Akbar",
-            "translation": "In the name of Allah, Allah is the Greatest.",
-            "reference": "Sahih Muslim"
-          },
+            "arabic": "اللَّهُ أَكْبَرُ",
+            "transliteration": "Allahu Akbar.",
+            "translation": "Allah is the Greatest.",
+            "reference": "Sahih Muslim 1218"
+          }
+        ]
+      },
+      {
+        "id": "hajj-d5-nafr-awwal",
+        "ritual": "hajj",
+        "category": "mina",
+        "title": "Option A: Early Departure (Nafr al-Awwal)",
+        "titleAr": "الخيار أ: النفر الأول",
+        "sequence": 2,
+        "location": "Mina exit",
+        "timing": "Before Maghrib",
+        "variantNotes": [
+          "If you leave Mina before sunset, day 6 stoning is waived.",
+          "If delayed past sunset, continue to 13th and perform next Rami."
+        ],
+        "checklist": [
+          "Exit timing confirmed",
+          "Transport to Makkah arranged",
+          "No pending mandatory rite"
+        ],
+        "instructions": "You may depart Mina before Maghrib after completing today's Rami.",
+        "duas": [
           {
-            "id": "hajj-d5-leaving-mina",
-            "arabic": "آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ",
-            "transliteration": "Aayibuna ta'ibuna 'aabiduna li-Rabbina hamidun.",
-            "translation": "We return, repenting, worshipping, and praising our Lord.",
-            "reference": "Sahih al-Bukhari 1797, Sahih Muslim 1344",
-            "note": "If departing Mina, recite this."
+            "id": "hajj-d5-trust",
+            "arabic": "وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ",
+            "transliteration": "Wa ma tawfiqi illa billah.",
+            "translation": "My success is only through Allah.",
+            "reference": "Quran 11:88"
+          }
+        ]
+      },
+      {
+        "id": "hajj-d5-stay-for-13th",
+        "ritual": "hajj",
+        "category": "mina",
+        "title": "Option B: Stay for 13th (Nafr al-Thani)",
+        "titleAr": "الخيار ب: البقاء لليوم الثالث عشر",
+        "sequence": 3,
+        "location": "Mina",
+        "timing": "If not leaving before Maghrib",
+        "variantNotes": [
+          "Staying is valid and often easier logistically for some groups.",
+          "You must perform Rami again on 13th."
+        ],
+        "checklist": [
+          "Camp stay confirmed",
+          "Pebbles for day 6 ready",
+          "Rest for final Rami"
+        ],
+        "instructions": "If you remain in Mina beyond sunset, complete next day's stoning as required.",
+        "duas": [
+          {
+            "id": "hajj-d5-sabr",
+            "arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا",
+            "transliteration": "Rabbana afrigh 'alayna sabran.",
+            "translation": "Our Lord, pour upon us patience.",
+            "reference": "Quran 2:250"
           }
         ]
       }
@@ -336,25 +730,65 @@
   },
   {
     "day": 6,
-    "date": "13th Dhul Hijjah - Third Day of Tashreeq (Optional)",
-    "title": "Day 6: Tashreeq Day 3",
-    "titleAr": "اليوم السادس: التشريق ٣",
+    "date": "13th Dhul Hijjah - Third Day (Optional for some)",
+    "title": "Day 6: Final Mina Rami (If Staying)",
+    "titleAr": "اليوم السادس: الرمي الأخير لمن بقي",
     "steps": [
       {
-        "id": "hajj-d6-rami",
+        "id": "hajj-d6-rami-all",
         "ritual": "hajj",
         "category": "rami",
-        "title": "Final Stoning (Optional)",
-        "titleAr": "الرمي الأخير",
+        "title": "Final Rami of Three Jamarat",
+        "titleAr": "الرمي الأخير للجمرات الثلاث",
         "sequence": 1,
-        "instructions": "If you stayed in Mina on the night of the 12th, you must stone all three Jamarat again today after Dhuhr. This is the final stoning. Staying the extra day is more virtuous.",
+        "location": "Jamarat",
+        "timing": "After Dhuhr",
+        "variantNotes": [
+          "Applicable for pilgrims who remained in Mina.",
+          "Complete order and counts exactly as prior days."
+        ],
+        "checklist": [
+          "21 pebbles in order",
+          "No missed throw",
+          "Prepare final departure"
+        ],
+        "instructions": "Stone all three Jamarat in order, then finalize your Mina obligations.",
         "duas": [
           {
-            "id": "hajj-d6-rami-dua",
-            "arabic": "بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ. اللَّهُمَّ تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ",
-            "transliteration": "Bismillahi, Allahu Akbar. Allahumma taqabbal minna innaka antas-samee'ul-'aleem.",
-            "translation": "In the name of Allah, Allah is the Greatest. O Allah, accept from us. Indeed, You are the All-Hearing, the All-Knowing.",
-            "reference": "Quran 2:127"
+            "id": "hajj-d6-rami-takbeer",
+            "arabic": "اللَّهُ أَكْبَرُ",
+            "transliteration": "Allahu Akbar.",
+            "translation": "Allah is the Greatest.",
+            "reference": "Sahih Muslim 1218"
+          }
+        ]
+      },
+      {
+        "id": "hajj-d6-leave-mina",
+        "ritual": "hajj",
+        "category": "mina",
+        "title": "Depart Mina to Makkah",
+        "titleAr": "مغادرة منى إلى مكة",
+        "sequence": 2,
+        "location": "Mina to Makkah",
+        "timing": "After completing final Rami",
+        "variantNotes": [
+          "Verify pending rites before leaving Mina.",
+          "Coordinate departure timing with your group leader."
+        ],
+        "checklist": [
+          "All Mina rites complete",
+          "Belongings collected",
+          "Ready for farewell stage"
+        ],
+        "instructions": "Leave Mina after fulfilling required stoning and proceed to Makkah.",
+        "duas": [
+          {
+            "id": "hajj-d6-hamd",
+            "arabic": "الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ",
+            "transliteration": "Alhamdu lillahil-ladhi bini'matihi tatimmus-salihat.",
+            "translation": "Praise be to Allah by whose favor righteous deeds are completed.",
+            "reference": "General supplication"
           }
         ]
       }
@@ -362,33 +796,65 @@
   },
   {
     "day": 7,
-    "date": "Before Departing Makkah",
+    "date": "Before Leaving Makkah",
     "title": "Farewell Tawaf",
     "titleAr": "طواف الوداع",
     "steps": [
       {
+        "id": "hajj-wada-prepare",
+        "ritual": "hajj",
+        "category": "tawaf",
+        "title": "Prepare for Tawaf al-Wada",
+        "titleAr": "الاستعداد لطواف الوداع",
+        "sequence": 1,
+        "location": "Masjid al-Haram",
+        "timing": "Last rite before departure",
+        "variantNotes": [
+          "Must be your final act in Makkah for most pilgrims.",
+          "Menstruating women are exempt according to Sunnah."
+        ],
+        "checklist": [
+          "No planned shopping after tawaf",
+          "Luggage mostly packed",
+          "Departure transport confirmed"
+        ],
+        "instructions": "Plan your departure so Tawaf al-Wada is your last major act in Makkah.",
+        "duas": [
+          {
+            "id": "hajj-wada-intent",
+            "arabic": "اللَّهُمَّ يَسِّرْ لِي طَوَافَ الْوَدَاعِ وَتَقَبَّلْهُ مِنِّي",
+            "transliteration": "Allahumma yassir li tawafal-wada' wa taqabbalhu minni.",
+            "translation": "O Allah, make the farewell tawaf easy for me and accept it from me.",
+            "reference": "General supplication"
+          }
+        ]
+      },
+      {
         "id": "hajj-tawaf-wada",
         "ritual": "hajj",
         "category": "tawaf",
-        "title": "Tawaf al-Wada (Farewell)",
-        "titleAr": "طواف الوداع",
-        "sequence": 1,
-        "instructions": "Before leaving Makkah, perform a farewell Tawaf of 7 circuits. This should be the last act before departing. No Sa'i is required. Pray 2 rakat after completing. Drink Zamzam. Make your final dua looking at the Kaaba.",
+        "title": "Perform Tawaf al-Wada and Depart",
+        "titleAr": "أداء طواف الوداع ثم المغادرة",
+        "sequence": 2,
+        "location": "Kaaba",
+        "timing": "Immediately before leaving Makkah",
+        "variantNotes": [
+          "Seven circuits, then two rakah if possible.",
+          "No long delay in Makkah after completion."
+        ],
+        "checklist": [
+          "7 circuits complete",
+          "Final dua made",
+          "Depart city with gratitude"
+        ],
+        "instructions": "Complete farewell tawaf, make heartfelt dua, and depart Makkah.",
         "duas": [
           {
-            "id": "hajj-farewell-dua",
-            "arabic": "اللَّهُمَّ إِنَّ الْبَيْتَ بَيْتُكَ وَالْعَبْدَ عَبْدُكَ وَابْنُ عَبْدِكَ وَابْنُ أَمَتِكَ، حَمَلْتَنِي عَلَى مَا سَخَّرْتَ لِي مِنْ خَلْقِكَ حَتَّى سَيَّرْتَنِي فِي بِلَادِكَ وَبَلَّغْتَنِي بِنِعْمَتِكَ حَتَّى أَعَنْتَنِي عَلَى قَضَاءِ مَنَاسِكِكَ، فَإِنْ كُنْتَ رَضِيتَ عَنِّي فَازْدَدْ عَنِّي رِضًا وَإِلَّا فَمِنَ الْآنِ قَبْلَ أَنْ تَنْأَى عَنْ بَيْتِكَ دَارِي، هَذَا أَوَانُ انْصِرَافِي إِنْ أَذِنْتَ لِي",
-            "transliteration": "Allahumma innal-bayta baytuka wal-'abdu 'abduka wabnu 'abdika wabnu amatik, hamaltani 'ala ma sakhkharta li min khalqika hatta sayyartani fi biladika wa ballaghtani bini'matika hatta a'antani 'ala qada'i manasikik, fa'in kunta radita 'anni fazdad 'anni ridan wa illa famin al-aana qabla an tan'a 'an baytika dari, hadha awaanu insirafi in adhinta li.",
-            "translation": "O Allah, this House is Your House, and this servant is Your servant, the child of Your servant, the child of Your maidservant. You carried me on what You subjugated for me from Your creation until You conveyed me through Your lands and brought me by Your grace until You helped me complete my rites. If You are pleased with me, then increase in pleasure with me. And if not, then from now before my home is far from Your House. This is the time of my departure, if You permit me.",
-            "reference": "Reported in various collections"
-          },
-          {
-            "id": "hajj-farewell-return",
-            "arabic": "اللَّهُمَّ لَا تَجْعَلْهُ آخِرَ الْعَهْدِ مِنْ بَيْتِكَ الْحَرَامِ",
-            "transliteration": "Allahumma la taj'alhu aakhiral-'ahdi min baytikal-haram.",
-            "translation": "O Allah, do not make this my last visit to Your Sacred House.",
-            "reference": "General supplication",
-            "note": "Make this dua with sincerity, asking Allah to bring you back to His House again."
+            "id": "hajj-tawaf-wada-dua",
+            "arabic": "رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ",
+            "transliteration": "Rabbana taqabbal minna innaka antas-sami'ul-'aleem.",
+            "translation": "Our Lord, accept from us; You are the All-Hearing, All-Knowing.",
+            "reference": "Quran 2:127"
           }
         ]
       }

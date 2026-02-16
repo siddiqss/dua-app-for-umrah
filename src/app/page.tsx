@@ -101,9 +101,9 @@ export default function HomePage() {
 
         <RitualCard
           href="/settings"
-          title="Common Duas"
+          title="Common Duas & Settings"
           titleAr="الأدعية العامة"
-          description="Essential daily duas for entering masjid, wudu, travel, and more."
+          description="Essential daily duas and reading settings, including Quran/Sahih-only filter."
           stepCount="10 essential supplications"
           icon={
             <svg

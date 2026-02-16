@@ -31,9 +31,13 @@ export default function PrepareOffline() {
     setProgress(0);
 
     let done = 0;
+    let successCount = 0;
     for (const url of urls) {
       try {
-        await fetch(url, { mode: "same-origin" });
+        const res = await fetch(url, { mode: "same-origin" });
+        if (res.ok) {
+          successCount++;
+        }
       } catch {
         // ignore single failure
       }
@@ -41,7 +45,7 @@ export default function PrepareOffline() {
       setProgress(done);
     }
 
-    setStatus("done");
+    setStatus(successCount > 0 ? "done" : "error");
   }, []);
 
   return (
@@ -76,7 +80,7 @@ export default function PrepareOffline() {
       )}
       {status === "done" && (
         <p className="text-sm text-accent font-sans font-medium">
-          Done. All reader pages are cached for offline use.
+          Done. Reader pages are cached for offline use.
         </p>
       )}
       {status === "error" && (

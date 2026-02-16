@@ -1,6 +1,7 @@
 "use client";
 
 import { Dua, FONT_SIZE_CLASSES } from "@/lib/types";
+import { getReferenceStrength } from "@/lib/reference";
 
 interface DuaCardProps {
   dua: Dua;
@@ -20,6 +21,7 @@ export default function DuaCard({
   total,
 }: DuaCardProps) {
   const arabicSizeClass = FONT_SIZE_CLASSES[fontSizeLevel] || "text-arabic-base";
+  const referenceStrength = getReferenceStrength(dua.reference);
 
   return (
     <div className="w-full px-4 py-6">
@@ -61,6 +63,19 @@ export default function DuaCard({
       {/* Reference */}
       {dua.reference && (
         <div className="mt-4">
+          <div className="flex justify-center mb-2">
+            <span
+              className={`text-[11px] font-semibold rounded-full px-2 py-1 font-sans ${
+                referenceStrength === "verified"
+                  ? "bg-accent/10 text-accent"
+                  : "bg-amber-100 text-amber-800"
+              }`}
+            >
+              {referenceStrength === "verified"
+                ? "Quran/Sahih Source"
+                : "Reported Source"}
+            </span>
+          </div>
           <p className="text-xs text-muted text-center font-sans">
             {dua.reference}
           </p>

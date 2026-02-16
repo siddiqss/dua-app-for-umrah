@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "umrah-companion",
+  // Set this before deploy if your token has multiple accounts.
+  // You can also export CLOUDFLARE_ACCOUNT_ID instead.
+  // "account_id": "<your-cloudflare-account-id>",
+  "compatibility_date": "2025-02-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    // Optional but recommended for ISR/incremental cache persistence.
+    // Create with: npx wrangler kv namespace create NEXT_INC_CACHE_KV
+    // Then set the id below.
+    // {
+    //   "binding": "NEXT_INC_CACHE_KV",
+    //   "id": "<your-kv-namespace-id>"
+    // }
+  ]
+}

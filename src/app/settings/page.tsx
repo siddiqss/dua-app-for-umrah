@@ -9,6 +9,7 @@ import { usePreferences } from "@/hooks/usePreferences";
 import { useSwipeNavigation } from "@/hooks/useSwipeNavigation";
 import commonData from "@/data/common.json";
 import { RitualStep } from "@/lib/types";
+import { isVerifiedReference } from "@/lib/reference";
 
 export default function SettingsPage() {
   const { prefs, updatePrefs } = usePreferences();
@@ -18,6 +19,11 @@ export default function SettingsPage() {
 
   const steps = commonData as unknown as RitualStep[];
   const step = steps[currentStep];
+  const visibleDuas = step
+    ? step.duas.filter(
+        (dua) => !prefs.verifiedOnly || isVerifiedReference(dua.reference)
+      )
+    : [];
 
   const goNext = useCallback(() => {
     if (currentStep < steps.length - 1) {
@@ -77,7 +83,15 @@ export default function SettingsPage() {
             </p>
           </div>
           <div className="divide-y divide-border">
-            {step.duas.map((dua, i) => (
+            {visibleDuas.length === 0 && (
+              <div className="px-6 py-6">
+                <p className="text-sm text-muted text-center font-sans">
+                  No Quran/Sahih-tagged dua in this step. Disable verified-only
+                  to view all.
+                </p>
+              </div>
+            )}
+            {visibleDuas.map((dua, i) => (
               <DuaCard
                 key={dua.id}
                 dua={dua}
@@ -85,7 +99,7 @@ export default function SettingsPage() {
                 showTransliteration={prefs.showTransliteration}
                 showTranslation={prefs.showTranslation}
                 index={i}
-                total={step.duas.length}
+                total={visibleDuas.length}
               />
             ))}
           </div>
@@ -111,6 +125,10 @@ export default function SettingsPage() {
         <h2 className="text-sm font-bold text-muted uppercase tracking-wider mb-3 font-sans">
           Display Settings
         </h2>
+        <p className="text-xs text-foreground/60 leading-relaxed mb-3 font-sans">
+          Use Quran/Sahih-only mode for stricter source filtering during ritual.
+          For fiqh details, follow your scholar/group guide.
+        </p>
 
         {/* Font Size */}
         <div className="border border-border rounded-xl p-4 mb-3">
@@ -174,6 +192,26 @@ export default function SettingsPage() {
               onChange={(e) =>
                 updatePrefs({ showTranslation: e.target.checked })
               }
+              className="w-5 h-5 accent-accent"
+            />
+          </label>
+        </div>
+
+        {/* Toggle: Verified sources */}
+        <div className="border border-border rounded-xl p-4 mb-3">
+          <label className="flex items-center justify-between cursor-pointer">
+            <div>
+              <span className="text-sm font-semibold text-foreground font-sans">
+                Quran/Sahih only
+              </span>
+              <p className="text-xs text-muted mt-0.5 font-sans">
+                Hide duas that are tagged as general or reported sources
+              </p>
+            </div>
+            <input
+              type="checkbox"
+              checked={prefs.verifiedOnly}
+              onChange={(e) => updatePrefs({ verifiedOnly: e.target.checked })}
               className="w-5 h-5 accent-accent"
             />
           </label>

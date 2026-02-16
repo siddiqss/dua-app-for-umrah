@@ -6,6 +6,7 @@ import FontSizeControl from "@/components/FontSizeControl";
 import { usePreferences } from "@/hooks/usePreferences";
 import Link from "next/link";
 import { SeoPage } from "@/data/seo-slugs";
+import { isVerifiedReference } from "@/lib/reference";
 
 interface SeoPageClientProps {
   page: SeoPage;
@@ -26,6 +27,9 @@ interface SeoPageClientProps {
 
 export default function SeoPageClient({ page, step }: SeoPageClientProps) {
   const { prefs, updatePrefs } = usePreferences();
+  const visibleDuas = step.duas.filter(
+    (dua) => !prefs.verifiedOnly || isVerifiedReference(dua.reference)
+  );
 
   const ctaHref =
     page.ritual === "umrah"
@@ -69,7 +73,14 @@ export default function SeoPageClient({ page, step }: SeoPageClientProps) {
 
       {/* Duas */}
       <div className="divide-y divide-border">
-        {step.duas.map((dua, i) => (
+        {visibleDuas.length === 0 && (
+          <div className="px-6 py-6">
+            <p className="text-sm text-muted text-center font-sans">
+              No Quran/Sahih-tagged dua in this page while verified-only is on.
+            </p>
+          </div>
+        )}
+        {visibleDuas.map((dua, i) => (
           <DuaCard
             key={dua.id}
             dua={dua}
@@ -77,7 +88,7 @@ export default function SeoPageClient({ page, step }: SeoPageClientProps) {
             showTransliteration={prefs.showTransliteration}
             showTranslation={prefs.showTranslation}
             index={i}
-            total={step.duas.length}
+            total={visibleDuas.length}
           />
         ))}
       </div>

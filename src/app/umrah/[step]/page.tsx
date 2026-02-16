@@ -10,6 +10,8 @@ import { useSwipeNavigation } from "@/hooks/useSwipeNavigation";
 import { usePreferences } from "@/hooks/usePreferences";
 import umrahData from "@/data/umrah.json";
 import { RitualStep } from "@/lib/types";
+import { isVerifiedReference } from "@/lib/reference";
+import StepGuidance from "@/components/StepGuidance";
 
 export default function UmrahStepReader() {
   const params = useParams();
@@ -21,6 +23,11 @@ export default function UmrahStepReader() {
   const steps = umrahData as unknown as RitualStep[];
   const step = steps[stepIndex];
   const isValid = step && !isNaN(stepIndex);
+  const visibleDuas = isValid
+    ? step.duas.filter(
+        (dua) => !prefs.verifiedOnly || isVerifiedReference(dua.reference)
+      )
+    : [];
 
   // Save progress
   useEffect(() => {
@@ -104,6 +111,7 @@ export default function UmrahStepReader() {
         }`}
       >
         {/* Instructions */}
+        <StepGuidance category={step.category} />
         <div className="px-6 py-4 border-b border-border">
           <p className="text-sm text-foreground/70 leading-relaxed font-sans">
             {step.instructions}
@@ -112,7 +120,15 @@ export default function UmrahStepReader() {
 
         {/* Duas */}
         <div className="divide-y divide-border">
-          {step.duas.map((dua, i) => (
+          {visibleDuas.length === 0 && (
+            <div className="px-6 py-6">
+              <p className="text-sm text-muted text-center font-sans">
+                No Quran/Sahih-tagged dua in this step. Disable verified-only in
+                Settings to view all.
+              </p>
+            </div>
+          )}
+          {visibleDuas.map((dua, i) => (
             <DuaCard
               key={dua.id}
               dua={dua}
@@ -120,7 +136,7 @@ export default function UmrahStepReader() {
               showTransliteration={prefs.showTransliteration}
               showTranslation={prefs.showTranslation}
               index={i}
-              total={step.duas.length}
+              total={visibleDuas.length}
             />
           ))}
         </div>

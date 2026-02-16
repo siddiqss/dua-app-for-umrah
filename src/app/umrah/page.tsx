@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 export default function UmrahOverview() {
   const { prefs } = usePreferences();
   const [lastStep, setLastStep] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     if (prefs.lastUmrahStep) {
@@ -19,6 +20,15 @@ export default function UmrahOverview() {
   const lastStepIndex = lastStep
     ? umrahData.findIndex((s) => s.id === lastStep)
     : -1;
+  const filteredSteps = umrahData.filter((step) => {
+    const q = query.trim().toLowerCase();
+    if (!q) return true;
+    return (
+      step.title.toLowerCase().includes(q) ||
+      step.titleAr.includes(q) ||
+      step.category.toLowerCase().includes(q)
+    );
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -44,7 +54,17 @@ export default function UmrahOverview() {
 
       {/* Steps List */}
       <div className="px-4 py-4 space-y-2">
-        {umrahData.map((step, index) => {
+        <div className="mb-3">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search steps (e.g., tawaf, sa'i, miqat)"
+            className="w-full rounded-xl border border-border px-4 py-3 text-sm font-sans bg-background text-foreground outline-none focus:border-accent"
+          />
+        </div>
+        {filteredSteps.map((step) => {
+          const index = umrahData.findIndex((s) => s.id === step.id);
           const isCompleted = lastStepIndex >= 0 && index < lastStepIndex;
           const isCurrent = index === lastStepIndex;
 
@@ -102,6 +122,11 @@ export default function UmrahOverview() {
             </Link>
           );
         })}
+        {filteredSteps.length === 0 && (
+          <p className="text-sm text-muted text-center py-6 font-sans">
+            No step found for this search.
+          </p>
+        )}
       </div>
 
       {/* Start Button */}

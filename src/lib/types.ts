@@ -15,6 +15,10 @@ export interface RitualStep {
   titleAr: string;
   sequence: number;
   subSequence?: number;
+  location?: string;
+  timing?: string;
+  variantNotes?: string[];
+  checklist?: string[];
   instructions: string;
   duas: Dua[];
 }
@@ -40,6 +44,7 @@ export interface UserPreferences {
   fontSizeLevel: number; // 0=small, 1=base, 2=large, 3=xl, 4=2xl
   showTransliteration: boolean;
   showTranslation: boolean;
+  verifiedOnly: boolean;
   lastUmrahStep?: string;
   lastHajjDay?: number;
   lastHajjStep?: string;
@@ -49,6 +54,7 @@ export const DEFAULT_PREFERENCES: UserPreferences = {
   fontSizeLevel: 1,
   showTransliteration: true,
   showTranslation: true,
+  verifiedOnly: false,
 };
 
 export const FONT_SIZE_CLASSES = [
