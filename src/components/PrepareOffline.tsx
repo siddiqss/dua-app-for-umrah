@@ -18,9 +18,9 @@ function getOfflineUrls(): string[] {
 }
 
 export default function PrepareOffline() {
-  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "done" | "partial" | "error"
+  >("idle");
   const [progress, setProgress] = useState(0);
   const [total, setTotal] = useState(0);
 
@@ -45,7 +45,15 @@ export default function PrepareOffline() {
       setProgress(done);
     }
 
-    setStatus(successCount > 0 ? "done" : "error");
+    if (successCount === urls.length) {
+      setStatus("done");
+      return;
+    }
+    if (successCount > 0) {
+      setStatus("partial");
+      return;
+    }
+    setStatus("error");
   }, []);
 
   return (
@@ -81,6 +89,11 @@ export default function PrepareOffline() {
       {status === "done" && (
         <p className="text-sm text-accent font-sans font-medium">
           Done. Reader pages are cached for offline use.
+        </p>
+      )}
+      {status === "partial" && (
+        <p className="text-sm text-amber-600 font-sans">
+          Some pages failed to cache. Stay on Wi‑Fi and run it again.
         </p>
       )}
       {status === "error" && (

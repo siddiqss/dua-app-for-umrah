@@ -20,6 +20,38 @@ const withPWA = withPWAInit({
     additionalManifestEntries: precacheEntries,
     runtimeCaching: [
       {
+        // Cache all same-origin navigations (reader pages) for offline reopen.
+        urlPattern: ({ request, url }) =>
+          request.mode === "navigate" &&
+          url.origin === self.location.origin &&
+          !url.pathname.startsWith("/api"),
+        handler: "NetworkFirst",
+        options: {
+          cacheName: "app-pages",
+          networkTimeoutSeconds: 4,
+          expiration: {
+            maxEntries: 200,
+            maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+          },
+        },
+      },
+      {
+        // Cache Next App Router flight/data responses used during client transitions.
+        urlPattern: ({ request, url }) =>
+          request.method === "GET" &&
+          url.origin === self.location.origin &&
+          request.destination === "" &&
+          !url.pathname.startsWith("/api"),
+        handler: "StaleWhileRevalidate",
+        options: {
+          cacheName: "app-flight-data",
+          expiration: {
+            maxEntries: 300,
+            maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+          },
+        },
+      },
+      {
         urlPattern: /^https:\/\/fonts\.(?:gstatic|googleapis)\.com\/.*/i,
         handler: "CacheFirst",
         options: {
