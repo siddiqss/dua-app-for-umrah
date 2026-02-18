@@ -1,4 +1,4 @@
-# Dua Nexus - Your Umrah & Hajj Companion
+# Your Umrah & Hajj Companion
 
 A high-readability Progressive Web App (PWA) for reading Umrah and Hajj duas. Designed for **optical clarity under the Makkah sun**, one-handed navigation in crowds, and **offline access** inside the Haram where cellular signals drop.
 

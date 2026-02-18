@@ -50,43 +50,37 @@ export default function StepMetaPanel({
   }
 
   return (
-    <section className="px-4 pt-3">
-      <div className="rounded-xl border border-border bg-foreground/[0.02] p-4">
+    <section className="mx-auto w-full max-w-xl px-4 pt-3">
+      <div className="ui-card-soft">
         <button
           type="button"
           onClick={() => setExpanded((v) => !v)}
-          className="w-full flex items-center justify-between text-left"
+          className="flex w-full items-center justify-between text-left"
           aria-expanded={expanded}
         >
-          <p className="text-xs uppercase tracking-wider text-muted font-semibold font-sans">
-            Step Matrix
-          </p>
-          <span className="text-xs text-accent font-semibold font-sans">
-            {expanded ? "Hide" : "Show"}
-          </span>
+          <p className="ui-section-title">Step Matrix</p>
+          <span className="text-xs font-semibold text-accent">{expanded ? "Hide" : "Show"}</span>
         </button>
 
         {expanded && (
           <div className="mt-3 space-y-3">
             {timing && (
-              <p className="text-sm text-foreground/80 font-sans">
-                <span className="font-semibold">Timing:</span> {timing}
+              <p className="text-sm text-foreground">
+                <span className="font-semibold">Timing:</span> <span className="text-muted">{timing}</span>
               </p>
             )}
             {location && (
-              <p className="text-sm text-foreground/80 font-sans">
-                <span className="font-semibold">Location:</span> {location}
+              <p className="text-sm text-foreground">
+                <span className="font-semibold">Location:</span> <span className="text-muted">{location}</span>
               </p>
             )}
 
             {variantNotes && variantNotes.length > 0 && (
               <div>
-                <p className="text-xs uppercase tracking-wider text-muted font-semibold font-sans">
-                  Variant Notes
-                </p>
+                <p className="ui-section-title">Variant Notes</p>
                 <ul className="mt-2 space-y-2">
                   {variantNotes.map((note) => (
-                    <li key={note} className="text-sm text-foreground/75 leading-relaxed font-sans">
+                    <li key={note} className="text-sm leading-relaxed text-muted">
                       {note}
                     </li>
                   ))}
@@ -96,14 +90,12 @@ export default function StepMetaPanel({
 
             {items.length > 0 && (
               <div>
-                <p className="text-xs uppercase tracking-wider text-muted font-semibold font-sans">
-                  Personal Checklist
-                </p>
+                <p className="ui-section-title">Personal Checklist</p>
                 <div className="mt-2 space-y-2">
                   {items.map((item) => (
                     <label
                       key={item}
-                      className="flex items-start gap-2 text-sm text-foreground/80 font-sans cursor-pointer"
+                      className="flex cursor-pointer items-start gap-2 rounded-xl border border-border bg-surface px-3 py-2 text-sm text-muted"
                     >
                       <input
                         type="checkbox"

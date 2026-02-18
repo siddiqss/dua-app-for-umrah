@@ -37,7 +37,7 @@ function generateUmrahSlugs(): SeoPage[] {
     // Primary slug
     pages.push({
       slug: baseSlug,
-      title: `${step.title} - Dua & Guide | Dua Nexus`,
+      title: `${step.title} - Dua & Guide | Your Umrah & Hajj Companion`,
       description: `${step.instructions.slice(0, 150)}... Read in large, clear font optimized for sunlight.`,
       h1: step.title,
       ritual: "umrah",
@@ -48,7 +48,7 @@ function generateUmrahSlugs(): SeoPage[] {
     // "dua for X" variant
     pages.push({
       slug: `dua-for-${baseSlug}`,
-      title: `Dua for ${step.title} - Arabic Text & Translation | Dua Nexus`,
+      title: `Dua for ${step.title} - Arabic Text & Translation | Your Umrah & Hajj Companion`,
       description: `Complete dua for ${step.title} with Arabic text, transliteration, and English translation. Large font, easy to read.`,
       h1: `Dua for ${step.title}`,
       ritual: "umrah",
@@ -59,7 +59,7 @@ function generateUmrahSlugs(): SeoPage[] {
     // "large font" variant
     pages.push({
       slug: `${baseSlug}-large-font`,
-      title: `${step.title} Dua - Large Font for Easy Reading | Dua Nexus`,
+      title: `${step.title} Dua - Large Font for Easy Reading | Your Umrah & Hajj Companion`,
       description: `${step.title} dua in extra-large Arabic font. Perfect for elderly pilgrims or reading in bright sunlight.`,
       h1: `${step.title} - Large Font`,
       ritual: "umrah",
@@ -70,7 +70,7 @@ function generateUmrahSlugs(): SeoPage[] {
     // "printable" variant
     pages.push({
       slug: `printable-${baseSlug}`,
-      title: `Printable ${step.title} Dua Card | Dua Nexus`,
+      title: `Printable ${step.title} Dua Card | Your Umrah & Hajj Companion`,
       description: `High-contrast printable ${step.title} dua. Black text on white background for maximum readability.`,
       h1: `Printable ${step.title} Dua`,
       ritual: "umrah",
@@ -94,7 +94,7 @@ function generateUmrahSlugs(): SeoPage[] {
       circuitVariants.forEach((slug) => {
         pages.push({
           slug,
-          title: `Tawaf Circuit ${n} Dua - Arabic & English | Dua Nexus`,
+          title: `Tawaf Circuit ${n} Dua - Arabic & English | Your Umrah & Hajj Companion`,
           description: `Dua for the ${n}${n === 1 ? "st" : n === 2 ? "nd" : n === 3 ? "rd" : "th"} circuit of Tawaf with Arabic text, transliteration, and English translation.`,
           h1: `Tawaf - Circuit ${n} Dua`,
           ritual: "umrah",
@@ -118,7 +118,7 @@ function generateUmrahSlugs(): SeoPage[] {
       lapVariants.forEach((slug) => {
         pages.push({
           slug,
-          title: `Sa'i Lap ${n} Dua - Arabic & Translation | Dua Nexus`,
+          title: `Sa'i Lap ${n} Dua - Arabic & Translation | Your Umrah & Hajj Companion`,
           description: `Dua for lap ${n} of Sa'i between Safa and Marwa. Clear Arabic text with transliteration and English meaning.`,
           h1: `Sa'i - Lap ${n} Dua`,
           ritual: "umrah",
@@ -174,7 +174,7 @@ function generateUmrahSlugs(): SeoPage[] {
   generalUmrahSlugs.forEach((item) => {
     pages.push({
       slug: item.slug,
-      title: `${item.title} | Dua Nexus`,
+      title: `${item.title} | Your Umrah & Hajj Companion`,
       description: `${item.title} - High-readability Arabic text with transliteration and English translation. Optimized for mobile and sunlight reading.`,
       h1: item.title,
       ritual: "umrah",
@@ -196,7 +196,7 @@ function generateHajjSlugs(): SeoPage[] {
 
       pages.push({
         slug: `hajj-${baseSlug}`,
-        title: `${step.title} - Hajj Dua & Guide | Dua Nexus`,
+        title: `${step.title} - Hajj Dua & Guide | Your Umrah & Hajj Companion`,
         description: `${step.instructions.slice(0, 150)}... Complete dua with Arabic text and translation.`,
         h1: `Hajj: ${step.title}`,
         ritual: "hajj",
@@ -206,7 +206,7 @@ function generateHajjSlugs(): SeoPage[] {
 
       pages.push({
         slug: `dua-for-hajj-${baseSlug}`,
-        title: `Dua for ${step.title} During Hajj | Dua Nexus`,
+        title: `Dua for ${step.title} During Hajj | Your Umrah & Hajj Companion`,
         description: `Complete dua for ${step.title} with Arabic, transliteration, and English translation. Large, readable font.`,
         h1: `Dua for ${step.title}`,
         ritual: "hajj",
@@ -216,7 +216,7 @@ function generateHajjSlugs(): SeoPage[] {
 
       pages.push({
         slug: `hajj-${baseSlug}-large-font`,
-        title: `${step.title} Dua Large Font | Dua Nexus`,
+        title: `${step.title} Dua Large Font | Your Umrah & Hajj Companion`,
         description: `${step.title} dua in large, readable Arabic font for Hajj pilgrims.`,
         h1: `${step.title} - Large Font`,
         ritual: "hajj",
@@ -259,7 +259,7 @@ function generateHajjSlugs(): SeoPage[] {
   generalHajjSlugs.forEach((item) => {
     pages.push({
       slug: item.slug,
-      title: `${item.title} | Dua Nexus`,
+      title: `${item.title} | Your Umrah & Hajj Companion`,
       description: `${item.title} - Clear Arabic text with transliteration and English translation. Optimized for mobile reading in sunlight.`,
       h1: item.title,
       ritual: "hajj",
@@ -280,7 +280,7 @@ function generateCommonSlugs(): SeoPage[] {
 
     pages.push({
       slug: baseSlug,
-      title: `${step.title} - Dua | Dua Nexus`,
+      title: `${step.title} - Dua | Your Umrah & Hajj Companion`,
       description: `${step.instructions} Clear Arabic text with transliteration and English translation.`,
       h1: step.title,
       ritual: "common",
@@ -290,7 +290,7 @@ function generateCommonSlugs(): SeoPage[] {
 
     pages.push({
       slug: `${baseSlug}-arabic-english`,
-      title: `${step.title} Dua - Arabic & English | Dua Nexus`,
+      title: `${step.title} Dua - Arabic & English | Your Umrah & Hajj Companion`,
       description: `${step.title} dua with full Arabic text, transliteration, and English translation.`,
       h1: `${step.title} - Arabic & English`,
       ritual: "common",
@@ -329,7 +329,7 @@ function generateCommonSlugs(): SeoPage[] {
   generalSlugs.forEach((item) => {
     pages.push({
       slug: item.slug,
-      title: `${item.title} | Dua Nexus`,
+      title: `${item.title} | Your Umrah & Hajj Companion`,
       description: `${item.title} - High-readability format with Arabic, transliteration, and English translation. Works offline.`,
       h1: item.title,
       ritual: "common",

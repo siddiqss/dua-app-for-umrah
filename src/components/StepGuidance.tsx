@@ -42,14 +42,12 @@ export default function StepGuidance({ category }: StepGuidanceProps) {
   const notes = CATEGORY_NOTES[category] || DEFAULT_NOTES;
 
   return (
-    <section className="px-4 pt-4">
-      <div className="rounded-xl border border-border bg-foreground/[0.02] p-4">
-        <p className="text-xs uppercase tracking-wider text-muted font-semibold font-sans">
-          Pilgrim Guidance
-        </p>
+    <section className="mx-auto w-full max-w-xl px-4 pt-4">
+      <div className="ui-card-soft">
+        <p className="ui-section-title">Pilgrim Guidance</p>
         <ul className="mt-2 space-y-2">
           {notes.map((note) => (
-            <li key={note} className="text-sm text-foreground/75 leading-relaxed font-sans">
+            <li key={note} className="text-sm leading-relaxed text-muted">
               {note}
             </li>
           ))}

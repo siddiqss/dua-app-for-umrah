@@ -74,8 +74,8 @@ export default function SeoPage({ params }: PageProps) {
     "@type": "Article",
     name: page.h1,
     description: page.description,
-    author: { "@type": "Organization", name: "Dua Nexus" },
-    publisher: { "@type": "Organization", name: "Dua Nexus" },
+    author: { "@type": "Organization", name: "Your Umrah & Hajj Companion" },
+    publisher: { "@type": "Organization", name: "Your Umrah & Hajj Companion" },
     inLanguage: ["en", "ar"],
     about: {
       "@type": "Thing",

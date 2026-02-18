@@ -29,7 +29,6 @@ export default function UmrahStepReader() {
       )
     : [];
 
-  // Save progress
   useEffect(() => {
     if (isValid && loaded) {
       updatePrefs({ lastUmrahStep: step.id });
@@ -64,15 +63,10 @@ export default function UmrahStepReader() {
 
   if (!isValid) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center p-8">
-          <p className="text-lg font-bold text-foreground font-sans">
-            Step not found
-          </p>
-          <button
-            onClick={() => router.push("/umrah")}
-            className="mt-4 touch-btn px-6 rounded-xl bg-accent text-white font-sans"
-          >
+      <div className="flex min-h-dvh items-center justify-center bg-background px-4">
+        <div className="ui-card w-full max-w-md text-center">
+          <p className="text-lg font-semibold text-foreground">Step not found</p>
+          <button onClick={() => router.push("/umrah")} className="ui-primary-btn mt-4">
             Back to Umrah Guide
           </button>
         </div>
@@ -85,7 +79,7 @@ export default function UmrahStepReader() {
     : `Step ${stepIndex + 1} of ${steps.length}`;
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-dvh bg-background flex flex-col">
       <Header
         title={step.title}
         subtitle={subtitle}
@@ -100,7 +94,6 @@ export default function UmrahStepReader() {
         }
       />
 
-      {/* Content */}
       <div
         className={`flex-1 overflow-y-auto pb-4 transition-all duration-150 ${
           animDir === "left"
@@ -110,21 +103,18 @@ export default function UmrahStepReader() {
             : "opacity-100 translate-x-0"
         }`}
       >
-        {/* Instructions */}
         <StepGuidance category={step.category} />
-        <div className="px-6 py-4 border-b border-border">
-          <p className="text-sm text-foreground/70 leading-relaxed font-sans">
-            {step.instructions}
-          </p>
+        <div className="mx-auto max-w-xl px-4 py-4">
+          <div className="ui-card-soft">
+            <p className="text-sm leading-relaxed text-muted">{step.instructions}</p>
+          </div>
         </div>
 
-        {/* Duas */}
-        <div className="divide-y divide-border">
+        <div>
           {visibleDuas.length === 0 && (
-            <div className="px-6 py-6">
-              <p className="text-sm text-muted text-center font-sans">
-                No Quran/Sahih-tagged dua in this step. Disable verified-only in
-                Settings to view all.
+            <div className="mx-auto max-w-xl px-4 py-6">
+              <p className="text-center text-sm text-muted">
+                No Quran/Sahih-tagged dua in this step. Disable verified-only in Settings to view all.
               </p>
             </div>
           )}
@@ -142,7 +132,6 @@ export default function UmrahStepReader() {
         </div>
       </div>
 
-      {/* Navigation */}
       <ReaderNav
         onPrevious={goPrev}
         onNext={goNext}

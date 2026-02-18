@@ -53,7 +53,7 @@ export default function SettingsPage() {
 
   if (mode === "reader" && step) {
     return (
-      <div className="min-h-screen bg-background flex flex-col">
+      <div className="min-h-dvh bg-background flex flex-col">
         <Header
           title={step.title}
           subtitle={`Common Duas - ${currentStep + 1} of ${steps.length}`}
@@ -77,17 +77,16 @@ export default function SettingsPage() {
               : "opacity-100 translate-x-0"
           }`}
         >
-          <div className="px-6 py-4 border-b border-border">
-            <p className="text-sm text-foreground/70 leading-relaxed font-sans">
-              {step.instructions}
-            </p>
+          <div className="mx-auto max-w-xl px-4 py-4">
+            <div className="ui-card-soft">
+              <p className="text-sm leading-relaxed text-muted">{step.instructions}</p>
+            </div>
           </div>
-          <div className="divide-y divide-border">
+          <div>
             {visibleDuas.length === 0 && (
-              <div className="px-6 py-6">
-                <p className="text-sm text-muted text-center font-sans">
-                  No Quran/Sahih-tagged dua in this step. Disable verified-only
-                  to view all.
+              <div className="mx-auto max-w-xl px-4 py-6">
+                <p className="text-center text-sm text-muted">
+                  No Quran/Sahih-tagged dua in this step. Disable verified-only to view all.
                 </p>
               </div>
             )}
@@ -117,94 +116,67 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <Header title="Settings & Common Duas" backHref="/" />
 
-      {/* Display Settings */}
-      <div className="px-4 py-4">
-        <h2 className="text-sm font-bold text-muted uppercase tracking-wider mb-3 font-sans">
-          Display Settings
-        </h2>
-        <p className="text-xs text-foreground/60 leading-relaxed mb-3 font-sans">
-          Use Quran/Sahih-only mode for stricter source filtering during ritual.
-          For fiqh details, follow your scholar/group guide.
-        </p>
-
-        {/* Font Size */}
-        <div className="border border-border rounded-xl p-4 mb-3">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-sm font-semibold text-foreground font-sans">
-              Arabic Font Size
-            </span>
-            <FontSizeControl
-              currentLevel={prefs.fontSizeLevel}
-              onChange={(level) => updatePrefs({ fontSizeLevel: level })}
-            />
-          </div>
-          <p
-            className={`arabic-text font-arabic ${
-              ["text-arabic-sm", "text-arabic-base", "text-arabic-lg", "text-arabic-xl", "text-arabic-2xl"][
-                prefs.fontSizeLevel
-              ]
-            } text-foreground`}
-            dir="rtl"
-          >
-            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+      <main className="mx-auto max-w-xl space-y-4 px-4 py-4 pb-16">
+        <section className="space-y-3">
+          <h2 className="ui-section-title">Display Settings</h2>
+          <p className="text-xs leading-relaxed text-muted">
+            Use Quran/Sahih-only mode for stricter source filtering during ritual.
+            For fiqh details, follow your scholar/group guide.
           </p>
-        </div>
 
-        {/* Toggle: Transliteration */}
-        <div className="border border-border rounded-xl p-4 mb-3">
-          <label className="flex items-center justify-between cursor-pointer">
+          <div className="ui-card-soft">
+            <div className="mb-3 flex items-center justify-between gap-2">
+              <span className="text-sm font-semibold text-foreground">Arabic Font Size</span>
+              <FontSizeControl
+                currentLevel={prefs.fontSizeLevel}
+                onChange={(level) => updatePrefs({ fontSizeLevel: level })}
+              />
+            </div>
+            <p
+              className={`arabic-text font-arabic ${
+                ["text-arabic-sm", "text-arabic-base", "text-arabic-lg", "text-arabic-xl", "text-arabic-2xl"][
+                  prefs.fontSizeLevel
+                ]
+              } text-foreground`}
+              dir="rtl"
+            >
+              بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+            </p>
+          </div>
+
+          <label className="ui-card-soft flex cursor-pointer items-center justify-between gap-3">
             <div>
-              <span className="text-sm font-semibold text-foreground font-sans">
-                Show Transliteration
-              </span>
-              <p className="text-xs text-muted mt-0.5 font-sans">
-                Latin alphabet pronunciation guide
-              </p>
+              <span className="text-sm font-semibold text-foreground">Show Transliteration</span>
+              <p className="mt-0.5 text-xs text-muted">Latin alphabet pronunciation guide</p>
             </div>
             <input
               type="checkbox"
               checked={prefs.showTransliteration}
-              onChange={(e) =>
-                updatePrefs({ showTransliteration: e.target.checked })
-              }
-              className="w-5 h-5 accent-accent"
+              onChange={(e) => updatePrefs({ showTransliteration: e.target.checked })}
+              className="h-5 w-5 accent-accent"
             />
           </label>
-        </div>
 
-        {/* Toggle: Translation */}
-        <div className="border border-border rounded-xl p-4 mb-3">
-          <label className="flex items-center justify-between cursor-pointer">
+          <label className="ui-card-soft flex cursor-pointer items-center justify-between gap-3">
             <div>
-              <span className="text-sm font-semibold text-foreground font-sans">
-                Show Translation
-              </span>
-              <p className="text-xs text-muted mt-0.5 font-sans">
-                English meaning of the dua
-              </p>
+              <span className="text-sm font-semibold text-foreground">Show Translation</span>
+              <p className="mt-0.5 text-xs text-muted">English meaning of the dua</p>
             </div>
             <input
               type="checkbox"
               checked={prefs.showTranslation}
-              onChange={(e) =>
-                updatePrefs({ showTranslation: e.target.checked })
-              }
-              className="w-5 h-5 accent-accent"
+              onChange={(e) => updatePrefs({ showTranslation: e.target.checked })}
+              className="h-5 w-5 accent-accent"
             />
           </label>
-        </div>
 
-        {/* Toggle: Verified sources */}
-        <div className="border border-border rounded-xl p-4 mb-3">
-          <label className="flex items-center justify-between cursor-pointer">
+          <label className="ui-card-soft flex cursor-pointer items-center justify-between gap-3">
             <div>
-              <span className="text-sm font-semibold text-foreground font-sans">
-                Quran/Sahih only
-              </span>
-              <p className="text-xs text-muted mt-0.5 font-sans">
+              <span className="text-sm font-semibold text-foreground">Quran/Sahih only</span>
+              <p className="mt-0.5 text-xs text-muted">
                 Hide duas that are tagged as general or reported sources
               </p>
             </div>
@@ -212,19 +184,13 @@ export default function SettingsPage() {
               type="checkbox"
               checked={prefs.verifiedOnly}
               onChange={(e) => updatePrefs({ verifiedOnly: e.target.checked })}
-              className="w-5 h-5 accent-accent"
+              className="h-5 w-5 accent-accent"
             />
           </label>
-        </div>
-      </div>
+        </section>
 
-      {/* Common Duas */}
-      <div className="px-4 py-2">
-        <h2 className="text-sm font-bold text-muted uppercase tracking-wider mb-3 font-sans">
-          Common Duas
-        </h2>
-
-        <div className="space-y-2">
+        <section className="space-y-2">
+          <h2 className="ui-section-title">Common Duas</h2>
           {steps.map((commonStep, index) => (
             <button
               key={commonStep.id}
@@ -232,19 +198,14 @@ export default function SettingsPage() {
                 setCurrentStep(index);
                 setMode("reader");
               }}
-              className="flex items-center gap-3 w-full px-4 py-3 rounded-xl border border-border hover:border-accent/30 active:scale-[0.98] transition-all text-left"
+              className="ui-card-soft flex w-full items-center gap-3 text-left"
             >
-              <div className="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 font-sans">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-bold text-accent tabular-nums">
                 {index + 1}
               </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-foreground truncate font-sans">
-                  {commonStep.title}
-                </p>
-                <p
-                  className="text-xs text-muted truncate font-arabic"
-                  dir="rtl"
-                >
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-sm font-semibold text-foreground">{commonStep.title}</p>
+                <p className="truncate text-xs text-muted font-arabic" dir="rtl">
                   {commonStep.titleAr}
                 </p>
               </div>
@@ -257,16 +218,14 @@ export default function SettingsPage() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-muted flex-shrink-0"
+                className="shrink-0 text-muted"
               >
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </button>
           ))}
-        </div>
-      </div>
-
-      <div className="h-8" />
+        </section>
+      </main>
     </div>
   );
 }

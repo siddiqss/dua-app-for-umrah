@@ -39,7 +39,7 @@ export default function SeoPageClient({ page, step }: SeoPageClientProps) {
       : "/settings";
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <Header
         title={page.h1}
         backHref="/"
@@ -51,69 +51,53 @@ export default function SeoPageClient({ page, step }: SeoPageClientProps) {
         }
       />
 
-      {/* SEO Content Header */}
-      <div className="px-6 py-6 border-b border-border">
-        <h1 className="text-2xl font-bold text-foreground mb-3 font-sans">
-          {page.h1}
-        </h1>
-        <p className="text-sm text-foreground/60 leading-relaxed font-sans">
-          {page.description}
-        </p>
-      </div>
+      <main className="mx-auto max-w-xl space-y-4 px-4 py-4 pb-20">
+        <section className="ui-card">
+          <h1 className="text-2xl font-bold text-foreground">{page.h1}</h1>
+          <p className="mt-3 text-sm leading-relaxed text-muted">{page.description}</p>
+        </section>
 
-      {/* Instructions */}
-      <div className="px-6 py-4 border-b border-border">
-        <h2 className="text-sm font-bold text-muted uppercase tracking-wider mb-2 font-sans">
-          How to Perform
-        </h2>
-        <p className="text-sm text-foreground/70 leading-relaxed font-sans">
-          {step.instructions}
-        </p>
-      </div>
+        <section className="ui-card-soft">
+          <h2 className="ui-section-title">How To Perform</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{step.instructions}</p>
+        </section>
 
-      {/* Duas */}
-      <div className="divide-y divide-border">
-        {visibleDuas.length === 0 && (
-          <div className="px-6 py-6">
-            <p className="text-sm text-muted text-center font-sans">
-              No Quran/Sahih-tagged dua in this page while verified-only is on.
-            </p>
-          </div>
-        )}
-        {visibleDuas.map((dua, i) => (
-          <DuaCard
-            key={dua.id}
-            dua={dua}
-            fontSizeLevel={prefs.fontSizeLevel}
-            showTransliteration={prefs.showTransliteration}
-            showTranslation={prefs.showTranslation}
-            index={i}
-            total={visibleDuas.length}
-          />
-        ))}
-      </div>
+        <div>
+          {visibleDuas.length === 0 && (
+            <div className="py-6">
+              <p className="text-center text-sm text-muted">
+                No Quran/Sahih-tagged dua in this page while verified-only is on.
+              </p>
+            </div>
+          )}
+          {visibleDuas.map((dua, i) => (
+            <DuaCard
+              key={dua.id}
+              dua={dua}
+              fontSizeLevel={prefs.fontSizeLevel}
+              showTransliteration={prefs.showTransliteration}
+              showTranslation={prefs.showTranslation}
+              index={i}
+              total={visibleDuas.length}
+            />
+          ))}
+        </div>
 
-      {/* CTA */}
-      <div className="px-4 py-8 border-t border-border">
-        <div className="max-w-sm mx-auto text-center">
-          <h3 className="text-lg font-bold text-foreground mb-2 font-sans">
+        <section className="ui-card text-center">
+          <h3 className="text-lg font-semibold text-foreground">
             Read All {page.ritual === "umrah" ? "Umrah" : page.ritual === "hajj" ? "Hajj" : ""} Duas
           </h3>
-          <p className="text-sm text-muted mb-4 font-sans">
-            Get the complete step-by-step guide with all duas. Works offline for
-            use in the Haram.
+          <p className="mt-2 text-sm text-muted">
+            Get the complete step-by-step guide with all duas. Works offline in the Haram.
           </p>
-          <Link
-            href={ctaHref}
-            className="touch-btn w-full rounded-xl bg-accent text-white text-lg font-semibold font-sans"
-          >
+          <Link href={ctaHref} className="ui-primary-btn mt-4 inline-flex w-full">
             Open Full Guide
           </Link>
-          <p className="text-xs text-muted mt-3 font-sans">
-            Free. No download required. Add to Home Screen for offline use.
+          <p className="mt-3 text-xs text-muted">
+            Free. No account required. Add to Home Screen for offline use.
           </p>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,15 +1,15 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "You're Offline | Dua Nexus",
+  title: "You're Offline | Your Umrah & Hajj Companion",
   description: "This page is not available offline. Go back to the home screen to use cached content.",
 };
 
 export default function OfflinePage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center px-6">
-      <div className="max-w-sm w-full text-center">
-        <div className="w-16 h-16 rounded-2xl bg-foreground/10 flex items-center justify-center mx-auto mb-6">
+    <div className="flex min-h-dvh items-center justify-center bg-background px-4 py-8">
+      <div className="ui-card w-full max-w-md text-center">
+        <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-surface-2 text-muted">
           <svg
             width="32"
             height="32"
@@ -27,18 +27,12 @@ export default function OfflinePage() {
             <path d="M22 12v2a2 2 0 01-2 2H2" />
           </svg>
         </div>
-        <h1 className="text-xl font-bold text-foreground font-sans mb-2">
-          You&apos;re offline
-        </h1>
-        <p className="text-sm text-muted font-sans mb-6">
-          This page wasn&apos;t saved for offline use. Open the home screen and
-          use the Umrah or Hajj guides — those work without internet once
-          you&apos;ve opened the app online once.
+        <h1 className="text-xl font-semibold text-foreground">You&apos;re offline</h1>
+        <p className="mt-2 text-sm leading-relaxed text-muted">
+          This page wasn&apos;t saved for offline use. Go back home and open Umrah or Hajj guides
+          once online to cache them.
         </p>
-        <Link
-          href="/"
-          className="touch-btn w-full rounded-xl bg-accent text-white font-sans font-semibold"
-        >
+        <Link href="/" className="ui-primary-btn mt-6 inline-flex w-full">
           Go to Home
         </Link>
       </div>

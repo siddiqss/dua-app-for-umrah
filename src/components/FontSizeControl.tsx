@@ -30,7 +30,7 @@ export default function FontSizeControl({
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="touch-btn w-10 h-10 min-h-0 min-w-0 rounded-lg bg-foreground/5 text-foreground text-sm font-bold font-sans"
+        className="ui-icon-btn text-sm font-semibold"
         aria-label="Adjust font size"
       >
         Aa
@@ -38,26 +38,22 @@ export default function FontSizeControl({
 
       {isOpen && (
         <>
-          <div
-            className="fixed inset-0 z-40"
-            onClick={() => setIsOpen(false)}
-          />
-          <div className="absolute right-0 top-12 z-50 bg-background border border-border rounded-xl shadow-lg p-3 min-w-[200px]">
-            <p className="text-xs text-muted mb-2 font-sans">
-              Font Size: {FONT_SIZE_LABELS[currentLevel]}
+          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
+          <div className="ui-card-soft absolute right-0 top-12 z-50 min-w-[220px]">
+            <p className="text-xs text-muted">
+              Font Size: <span className="font-semibold">{FONT_SIZE_LABELS[currentLevel]}</span>
             </p>
-            <div className="flex items-center gap-2">
+            <div className="mt-2 flex items-center gap-2">
               <button
                 onClick={decrease}
                 disabled={currentLevel === 0}
-                className="touch-btn w-12 h-12 min-h-0 min-w-0 rounded-lg bg-foreground/5 text-foreground text-lg font-bold disabled:opacity-30 font-sans"
+                className="ui-secondary-btn min-h-0 h-10 w-12 px-0 text-sm"
                 aria-label="Decrease font size"
               >
                 A-
               </button>
-              <div className="flex-1 h-1 bg-foreground/10 rounded-full relative">
-                <div
-                  className="absolute top-0 left-0 h-full bg-accent rounded-full transition-all"
+              <div className="ui-progress flex-1">
+                <span
                   style={{
                     width: `${(currentLevel / (FONT_SIZE_LABELS.length - 1)) * 100}%`,
                   }}
@@ -66,7 +62,7 @@ export default function FontSizeControl({
               <button
                 onClick={increase}
                 disabled={currentLevel === FONT_SIZE_LABELS.length - 1}
-                className="touch-btn w-12 h-12 min-h-0 min-w-0 rounded-lg bg-foreground/5 text-foreground text-lg font-bold disabled:opacity-30 font-sans"
+                className="ui-secondary-btn min-h-0 h-10 w-12 px-0 text-sm"
                 aria-label="Increase font size"
               >
                 A+

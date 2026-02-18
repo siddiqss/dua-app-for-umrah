@@ -44,7 +44,7 @@ export default function MyDuasPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <Header
         title="My Personal Duas"
         subtitle="أدعيتي الخاصة"
@@ -56,7 +56,7 @@ export default function MyDuasPage() {
                 setEditingDua(undefined);
                 setShowForm(true);
               }}
-              className="touch-btn w-10 h-10 min-h-0 min-w-0 rounded-lg bg-accent text-white"
+              className="ui-icon-btn bg-accent text-white border-accent"
               aria-label="Add new dua"
             >
               <svg
@@ -87,43 +87,38 @@ export default function MyDuasPage() {
           initialDua={editingDua}
         />
       ) : loaded && duas.length === 0 ? (
-        <div className="flex flex-col items-center justify-center px-8 py-16 text-center">
-          <div className="w-16 h-16 rounded-2xl bg-accent/10 text-accent flex items-center justify-center mb-4">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-            </svg>
+        <div className="mx-auto max-w-xl px-4 py-10">
+          <div className="ui-card text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+              </svg>
+            </div>
+            <h2 className="text-lg font-semibold text-foreground">No personal duas yet</h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              Add your own duas, family requests, or personal supplications.
+              They are formatted in the same clear, readable style.
+            </p>
+            <button onClick={() => setShowForm(true)} className="ui-primary-btn mt-6">
+              Add Your First Dua
+            </button>
           </div>
-          <h2 className="text-lg font-bold text-foreground font-sans">
-            No personal duas yet
-          </h2>
-          <p className="text-sm text-muted mt-2 max-w-xs font-sans">
-            Add your own duas, family requests, or personal supplications. They
-            will be formatted in the same clear, readable style.
-          </p>
-          <button
-            onClick={() => setShowForm(true)}
-            className="touch-btn mt-6 px-8 rounded-xl bg-accent text-white font-sans"
-          >
-            Add Your First Dua
-          </button>
         </div>
       ) : (
-        <div className="divide-y divide-border">
+        <div className="mx-auto max-w-xl space-y-3 px-4 py-4 pb-12">
           {duas.map((dua) => (
-            <div key={dua.id} className="relative">
-              <div className="px-4 pt-4 pb-1">
-                <h3 className="text-sm font-bold text-foreground font-sans">
-                  {dua.title}
-                </h3>
+            <div key={dua.id} className="ui-card-soft p-0">
+              <div className="px-4 pt-4">
+                <h3 className="text-sm font-semibold text-foreground">{dua.title}</h3>
               </div>
               <DuaCard
                 dua={{
@@ -137,15 +132,12 @@ export default function MyDuasPage() {
                 showTranslation={prefs.showTranslation}
               />
               <div className="flex gap-2 px-4 pb-4">
-                <button
-                  onClick={() => handleEdit(dua)}
-                  className="text-xs text-accent font-semibold px-3 py-1.5 rounded-lg bg-accent/5 font-sans"
-                >
+                <button onClick={() => handleEdit(dua)} className="ui-secondary-btn text-xs">
                   Edit
                 </button>
                 <button
                   onClick={() => handleDelete(dua.id)}
-                  className="text-xs text-red-600 font-semibold px-3 py-1.5 rounded-lg bg-red-50 font-sans"
+                  className="ui-secondary-btn border-rose-300 bg-rose-50 text-rose-700 text-xs dark:bg-rose-900/20 dark:border-rose-700 dark:text-rose-200"
                 >
                   Delete
                 </button>

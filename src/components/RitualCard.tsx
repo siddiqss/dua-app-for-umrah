@@ -22,19 +22,19 @@ export default function RitualCard({
   return (
     <Link
       href={href}
-      className="block w-full border border-border rounded-2xl p-6 transition-all active:scale-[0.98] active:bg-foreground/5 hover:border-accent/30"
+      className="ui-card block w-full transition-all hover:border-accent/40 active:translate-y-px"
     >
       <div className="flex items-start gap-4">
-        <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent/10 text-accent">
           {icon}
         </div>
-        <div className="flex-1 min-w-0">
-          <h2 className="text-lg font-bold text-foreground font-sans">{title}</h2>
-          <p className="text-sm text-muted font-arabic mt-0.5" dir="rtl">
+        <div className="min-w-0 flex-1">
+          <h2 className="text-lg font-semibold text-foreground">{title}</h2>
+          <p className="mt-0.5 truncate text-sm text-muted font-arabic" dir="rtl">
             {titleAr}
           </p>
-          <p className="text-sm text-foreground/60 mt-2 font-sans">{description}</p>
-          <p className="text-xs text-accent font-semibold mt-2 font-sans">
+          <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
+          <p className="mt-2 text-xs font-semibold text-accent tabular-nums">
             {stepCount}
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function RitualCard({
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-muted flex-shrink-0 mt-1"
+          className="mt-1 shrink-0 text-muted"
         >
           <path d="M9 18l6-6-6-6" />
         </svg>

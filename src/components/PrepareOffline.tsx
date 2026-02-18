@@ -32,10 +32,16 @@ export default function PrepareOffline() {
 
     let done = 0;
     let successCount = 0;
+    const pageCache = "caches" in window ? await caches.open("app-pages") : null;
     for (const url of urls) {
       try {
-        const res = await fetch(url, { mode: "same-origin" });
+        const res = await fetch(url, {
+          mode: "same-origin",
+        });
         if (res.ok) {
+          if (pageCache) {
+            await pageCache.put(url, res.clone());
+          }
           successCount++;
         }
       } catch {
@@ -57,50 +63,46 @@ export default function PrepareOffline() {
   }, []);
 
   return (
-    <div className="px-4 py-3 border-t border-border">
-      <p className="text-xs text-muted mb-2 font-sans">
-        On Wi‑Fi, tap below to cache all Umrah and Hajj steps so they work
-        offline.
-      </p>
-      {status === "idle" && (
-        <button
-          type="button"
-          onClick={run}
-          className="touch-btn w-full rounded-xl bg-foreground/5 text-foreground font-sans text-sm font-semibold"
-        >
-          Prepare for offline
-        </button>
-      )}
-      {status === "loading" && (
-        <div className="space-y-2">
-          <div className="h-2 bg-foreground/10 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-accent rounded-full transition-all duration-300"
-              style={{
-                width: `${total ? (progress / total) * 100 : 0}%`,
-              }}
-            />
+    <section className="mx-auto w-full max-w-xl px-4 py-3">
+      <div className="ui-card-soft">
+        <p className="text-xs leading-relaxed text-muted">
+          On Wi-Fi, cache all Umrah and Hajj steps so they work fully offline.
+        </p>
+        {status === "idle" && (
+          <button type="button" onClick={run} className="ui-primary-btn mt-3 w-full">
+            Prepare for offline
+          </button>
+        )}
+        {status === "loading" && (
+          <div className="mt-3 space-y-2">
+            <div className="ui-progress">
+              <span
+                style={{
+                  width: `${total ? (progress / total) * 100 : 0}%`,
+                }}
+              />
+            </div>
+            <p className="text-xs text-muted tabular-nums">
+              Caching {progress} of {total}
+            </p>
           </div>
-          <p className="text-xs text-muted font-sans">
-            Caching {progress} of {total}…
+        )}
+        {status === "done" && (
+          <p className="mt-3 text-sm font-medium text-accent">
+            Done. Reader pages are cached for offline use.
           </p>
-        </div>
-      )}
-      {status === "done" && (
-        <p className="text-sm text-accent font-sans font-medium">
-          Done. Reader pages are cached for offline use.
-        </p>
-      )}
-      {status === "partial" && (
-        <p className="text-sm text-amber-600 font-sans">
-          Some pages failed to cache. Stay on Wi‑Fi and run it again.
-        </p>
-      )}
-      {status === "error" && (
-        <p className="text-sm text-red-600 font-sans">
-          Something went wrong. Try again on a stable connection.
-        </p>
-      )}
-    </div>
+        )}
+        {status === "partial" && (
+          <p className="mt-3 text-sm text-amber-600 dark:text-amber-400">
+            Some pages failed to cache. Stay on Wi-Fi and run it again.
+          </p>
+        )}
+        {status === "error" && (
+          <p className="mt-3 text-sm text-rose-600 dark:text-rose-400">
+            Something went wrong. Try again on a stable connection.
+          </p>
+        )}
+      </div>
+    </section>
   );
 }

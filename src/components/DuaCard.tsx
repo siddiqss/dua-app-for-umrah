@@ -24,72 +24,55 @@ export default function DuaCard({
   const referenceStrength = getReferenceStrength(dua.reference);
 
   return (
-    <div className="w-full px-4 py-6">
+    <div className="mx-auto w-full max-w-xl px-4 py-5">
       {index !== undefined && total !== undefined && total > 1 && (
-        <p className="text-xs text-muted text-center mb-4 font-sans">
+        <p className="mb-4 text-center text-xs text-muted tabular-nums">
           Dua {index + 1} of {total}
         </p>
       )}
 
-      {/* Arabic Text */}
-      <div className="mb-6">
-        <p
-          className={`arabic-text font-arabic ${arabicSizeClass} text-foreground leading-relaxed`}
-          dir="rtl"
-          lang="ar"
-        >
-          {dua.arabic}
-        </p>
-      </div>
-
-      {/* Transliteration */}
-      {showTransliteration && dua.transliteration && (
-        <div className="mb-4">
-          <p className="text-base text-foreground/80 text-center italic leading-relaxed font-sans">
-            {dua.transliteration}
+      <div className="ui-card">
+        <div className="mb-5">
+          <p
+            className={`arabic-text font-arabic ${arabicSizeClass} text-foreground`}
+            dir="rtl"
+            lang="ar"
+          >
+            {dua.arabic}
           </p>
         </div>
-      )}
 
-      {/* Translation */}
-      {showTranslation && dua.translation && (
-        <div className="mb-4">
-          <p className="text-sm text-foreground/70 text-center leading-relaxed font-sans">
-            {dua.translation}
-          </p>
-        </div>
-      )}
-
-      {/* Reference */}
-      {dua.reference && (
-        <div className="mt-4">
-          <div className="flex justify-center mb-2">
-            <span
-              className={`text-[11px] font-semibold rounded-full px-2 py-1 font-sans ${
-                referenceStrength === "verified"
-                  ? "bg-accent/10 text-accent"
-                  : "bg-amber-100 text-amber-800"
-              }`}
-            >
-              {referenceStrength === "verified"
-                ? "Quran/Sahih Source"
-                : "Reported Source"}
-            </span>
+        {showTransliteration && dua.transliteration && (
+          <div className="mb-4">
+            <p className="text-center text-base italic leading-relaxed text-foreground/85">
+              {dua.transliteration}
+            </p>
           </div>
-          <p className="text-xs text-muted text-center font-sans">
-            {dua.reference}
-          </p>
-        </div>
-      )}
+        )}
 
-      {/* Note */}
-      {dua.note && (
-        <div className="mt-3 mx-auto max-w-sm">
-          <p className="text-xs text-accent text-center leading-relaxed font-sans bg-accent/5 rounded-lg px-3 py-2">
-            {dua.note}
-          </p>
-        </div>
-      )}
+        {showTranslation && dua.translation && (
+          <div className="mb-4">
+            <p className="text-center text-sm leading-relaxed text-muted">{dua.translation}</p>
+          </div>
+        )}
+
+        {dua.reference && (
+          <div className="mt-3">
+            <div className="mb-2 flex justify-center">
+              <span className={`ui-chip ${referenceStrength === "verified" ? "ui-chip-active" : ""}`}>
+                {referenceStrength === "verified" ? "Quran/Sahih Source" : "Reported Source"}
+              </span>
+            </div>
+            <p className="text-center text-xs text-muted">{dua.reference}</p>
+          </div>
+        )}
+
+        {dua.note && (
+          <div className="mx-auto mt-3 max-w-sm">
+            <p className="ui-note text-center">{dua.note}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
