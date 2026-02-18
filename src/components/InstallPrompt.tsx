@@ -11,44 +11,69 @@ export default function InstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  const [mode, setMode] = useState<"native" | "ios" | "manual">("manual");
+
+  const DISMISS_KEY = "umrah-companion-install-dismissed";
+
+  const isStandalone = () => {
+    if (typeof window === "undefined") return false;
+    return (
+      window.matchMedia("(display-mode: standalone)").matches ||
+      (window.navigator as Navigator & { standalone?: boolean }).standalone === true
+    );
+  };
+
+  const getInstallMode = () => {
+    if (typeof window === "undefined") return "manual" as const;
+    const ua = window.navigator.userAgent.toLowerCase();
+    const isIOS = /iphone|ipad|ipod/.test(ua);
+    if (isIOS) return "ios" as const;
+    return "manual" as const;
+  };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const wasDismissed = localStorage.getItem("dua-nexus-install-dismissed");
-      if (wasDismissed) {
-        setDismissed(true);
-        return;
-      }
+    if (typeof window === "undefined") return;
+
+    if (localStorage.getItem(DISMISS_KEY) || isStandalone()) {
+      return;
     }
+
+    setMode(getInstallMode());
+    const fallbackTimer = window.setTimeout(() => {
+      setShowPrompt(true);
+    }, 1200);
 
     const handler = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
+      setMode("native");
       setShowPrompt(true);
     };
 
     window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+    return () => {
+      window.clearTimeout(fallbackTimer);
+      window.removeEventListener("beforeinstallprompt", handler);
+    };
   }, []);
 
   const handleInstall = async () => {
     if (!deferredPrompt) return;
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === "accepted") {
-      setShowPrompt(false);
+    setShowPrompt(false);
+    if (outcome !== "accepted") {
+      localStorage.setItem(DISMISS_KEY, "true");
     }
     setDeferredPrompt(null);
   };
 
   const handleDismiss = () => {
     setShowPrompt(false);
-    setDismissed(true);
-    localStorage.setItem("dua-nexus-install-dismissed", "true");
+    localStorage.setItem(DISMISS_KEY, "true");
   };
 
-  if (!showPrompt || dismissed) return null;
+  if (!showPrompt) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 safe-bottom">
@@ -71,7 +96,12 @@ export default function InstallPrompt() {
           <div className="flex-1">
             <p className="text-sm font-semibold text-foreground">Add to Home Screen</p>
             <p className="mt-1 text-xs leading-relaxed text-muted">
-              Install the app for offline access. Works without internet in the Haram.
+              {mode === "native" &&
+                "Install for quick access and offline use in the Haram."}
+              {mode === "ios" &&
+                "In Safari, tap Share then Add to Home Screen for offline access."}
+              {mode === "manual" &&
+                "Use your browser menu (Share or ⋮) then Add to Home Screen / Install app."}
             </p>
           </div>
         </div>
@@ -79,9 +109,15 @@ export default function InstallPrompt() {
           <button onClick={handleDismiss} className="ui-secondary-btn flex-1">
             Not Now
           </button>
-          <button onClick={handleInstall} className="ui-primary-btn flex-1">
-            Install
-          </button>
+          {mode === "native" ? (
+            <button onClick={handleInstall} className="ui-primary-btn flex-1">
+              Install
+            </button>
+          ) : (
+            <button onClick={handleDismiss} className="ui-primary-btn flex-1">
+              OK
+            </button>
+          )}
         </div>
       </div>
     </div>
